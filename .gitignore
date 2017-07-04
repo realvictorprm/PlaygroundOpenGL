@@ -1,0 +1,9 @@
+/.vs
+/examples
+/Debug
+/CMakeFiles
+/src/FirstChapter/bin
+/src/FirstChapter/obj
+/src/FirstChapter/*.vcxproj
+/src/FirstChapter/*.filters
+/*.sln
