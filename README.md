@@ -1,4 +1,4 @@
-# PlaygroundOpenGL
+# PlaygroundOpenGL ![buildstatus](https://travis-ci.org/realvictorprm/PlaygroundOpenGL.svg?branch=master)
 A repository with easy cross platform setup for learning OpenGL and testing OpenGL samples
 
 
