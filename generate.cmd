@@ -6,8 +6,7 @@ goto menu
 echo Build Project Generator:
 echo.
 echo [0] Clean
-echo [1] Visual C++ 2015
-echo [2] Visual C++ 2017
+echo [1] Visual C++ 2017
 echo.
 echo %cmd%
 
@@ -20,10 +19,6 @@ if "%C%"=="0" goto clean
 
 :clean
 %cmd% --file=premake5.lua clean
-goto quit
-
-:vs2015
-%cmd% --file=premake5.lua vs2015
 goto quit
 
 :vs2017

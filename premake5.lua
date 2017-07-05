@@ -2,7 +2,7 @@
 include "helper.lua"
 
 workspace "GraphicsProgramming"
-	configurations { "Debug", "Release" }
+    configurations { "Debug", "Release" }
 	architecture "x86_64"
 	language "C++"
 	buildGLFW()
@@ -21,17 +21,16 @@ project "FirstChapter"
 		
 	includeGLFW()
 	linkGLFW()
-	
 	includeGLM()
 	includeAndAddGlad()	
 	includeOGLPlus()
 	
-	filter { "system:windows" }
+	if (os.is("Windows")) then
 		links { "OpenGL32" }
-	
-	filter { "system:not windows" }
+	else
 		links { "GL" }
 		libdirs { os.findlib("GL") }
+	end
 	
 	filter "configurations:Debug"
 		defines { "DEBUG" }

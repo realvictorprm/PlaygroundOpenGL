@@ -9,12 +9,13 @@ end
 function buildGLFW()
 	local dir = os.getcwd()
 	os.chdir("external/glfw")
-	filter "system:windows"
+	if(os.is("Windows")) then
 		os.execute("cmake -DBUILD_SHARED_LIBS=OFF -DGLFW_BUILD_EXAMPLES=OFF -DGLFW_BUILD_TESTS=OFF -DGLFW_BUILD_DOCS=OFF -G \"Visual Studio 15 2017 Win64\"")
 		os.execute("msbuild GLFW.sln /p:Configuration=Release")
-	filter "system:not windows"
+	else
 		os.execute("cmake -DBUILD_SHARED_LIBS=OFF -DGLFW_BUILD_EXAMPLES=OFF -DGLFW_BUILD_TESTS=OFF -DGLFW_BUILD_DOCS=OFF -G \"Unix Makefiles\"")
 		os.execute("make")
+	end
 	os.chdir(dir)
 end
 	
@@ -23,11 +24,11 @@ function includeGLFW()
 end
 
 function linkGLFW()
-	filter "system:windows"
+	if(os.is("Windows")) then
 		links "external/glfw/src/Release/glfw3.lib"
-	filter "system:not windows"
+	else
 		links "external/glfw/src/Release/libglfw3.so"
-	
+	end
 end
 
 function includeGLM()

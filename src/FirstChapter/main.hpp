@@ -8,7 +8,11 @@
 #include <functional>
 #include <fstream>
 #include <string>
+#if __has_include(<optional>)
 #include <optional>
+#else 
+#include <experimental\optional>
+#endif
 #include <tuple>
 #include <numeric>
 
@@ -24,7 +28,7 @@
 struct ShaderPart {
     GLuint vertexShader;
     GLuint fragmentShader;
-    GLuint shaderProgram;
+    GLuint program;
 };
 
 struct VertexBufferPart {
