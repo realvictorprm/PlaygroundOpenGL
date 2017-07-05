@@ -7,3 +7,4 @@
 /src/FirstChapter/*.vcxproj
 /src/FirstChapter/*.filters
 /*.sln
+src/FirstChapter/FirstChapter.vcxproj.user

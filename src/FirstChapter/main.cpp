@@ -41,9 +41,15 @@ auto readCompleteFile (std::string filename) {
 };
 
 float vertices[] = {
-    -0.5f, -0.5f, 0.0f,
-    0.5f, -0.5f, 0.0f,
-    0.0f,  0.5f, 0.0f
+    0.5f,  0.5f, 0.0f,  // top right
+    0.5f, -0.5f, 0.0f,  // bottom right
+    -0.5f, -0.5f, 0.0f,  // bottom left
+    -0.5f,  0.5f, 0.0f   // top left 
+};
+
+unsigned int indices[] = {
+    0, 1, 3,
+    1, 2, 3
 };
 
 // logs every gl call to the console
@@ -60,6 +66,31 @@ auto createManagedWindow(GLFWwindow* window) {
         glfwDestroyWindow(w); 
     });
 }
+
+auto glErrorToString(GLuint& error) {
+    switch (error) {
+    case GL_INVALID_ENUM:
+        return "GL_INVALID_ENUM";
+    case GL_INVALID_FRAMEBUFFER_OPERATION:
+        return "GL_INVALID_FRAMEBUFFER_OPERATION";
+    case GL_OUT_OF_MEMORY:
+        return "GL_OUT_OF_MEMORY";
+    case GL_INVALID_VALUE:
+        return "GL_INVALID_VALUE";
+    case GL_INVALID_OPERATION:
+        return "GL_INVALID_OPERATION";
+    default:
+        return "unkown";
+    }
+}
+
+auto checkGLError = []() {
+    auto error = glGetError();
+    if (error != GL_NO_ERROR) {
+        std::cerr << "error code "<< error << ", " << glErrorToString(error) << std::endl;
+        
+    }
+};
 
 ManagedWindow init() {
     auto res = glfwInit();
@@ -152,25 +183,38 @@ auto setupOpenGL(ManagedWindow managedWindow) {
     };
 
     auto setupBuffers = []() {
-        GLuint VAO, VBO;
+
+        GLuint VAO, VBO, EBO;
+
+        // Generate buffers
         glGenVertexArrays(1, &VAO);
         glGenBuffers(1, &VBO);
+        glGenBuffers(1, &EBO);
         // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
         glBindVertexArray(VAO);
 
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
         glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
         glEnableVertexAttribArray(0);
 
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
+        glBindVertexArray(0);
+
+        checkGLError();
+
         //// note that this is allowed, the call to glVertexAttribPointer registered VBO as the vertex attribute's bound vertex buffer object so afterwards we can safely unbind
         //glBindBuffer(GL_ARRAY_BUFFER, 0);
-
+        
+        
         //// You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
         //// VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
         //glBindVertexArray(0);
-        return VertexBufferPart{ VAO, VBO };
+        return VertexBufferPart{ VAO, VBO, EBO };
     };
 
     // Begin OpenGL stuff
@@ -187,9 +231,12 @@ void loop(ManagedWindow& managedWindow, ShaderPart& shader, VertexBufferPart& da
         // Clear
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
-        
-        glDrawArrays(GL_TRIANGLES, 0, 3);
 
+        glBindVertexArray(data.vao);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+
+        checkGLError();
         glfwSwapBuffers(window);
         glfwPollEvents();
     }

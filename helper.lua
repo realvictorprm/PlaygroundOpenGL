@@ -8,7 +8,7 @@ end
 
 function buildGLFW()
 	local dir = os.getcwd()
-	os.chdir("submodules/glfw")
+	os.chdir("external/glfw")
 	filter "system:windows"
 		os.execute("cmake -DBUILD_SHARED_LIBS=OFF -G \"Visual Studio 15 2017 Win64\"")
 		os.execute("msbuild GLFW.sln /p:Configuration=Release")
@@ -16,15 +16,15 @@ function buildGLFW()
 end
 	
 function includeGLFW()
-	includedirs "submodules/glfw/include/GLFW"
+	includedirs "external/glfw/include/GLFW"
 end
 
 function linkGLFW()
-	links "submodules/glfw/src/Release/glfw3.lib"
+	links "external/glfw/src/Release/glfw3.lib"
 end
 
 function includeGLM()
-	includedirs "submodules/glm/glm"
+	includedirs "external/glm/glm"
 end
 
 function includeOGLPlus()

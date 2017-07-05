@@ -30,6 +30,7 @@ struct ShaderPart {
 struct VertexBufferPart {
     GLuint vbo;
     GLuint vao;
+    GLuint ebo;
 };
 
 #endif // MAIN_HPP
