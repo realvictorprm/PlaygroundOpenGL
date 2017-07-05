@@ -202,8 +202,8 @@ auto setupOpenGL(ManagedWindow managedWindow) {
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
         glEnableVertexAttribArray(0);
 
-        glBindBuffer(GL_ARRAY_BUFFER, 0);
-        glBindVertexArray(0);
+        /*glBindBuffer(GL_ARRAY_BUFFER, 0);
+        glBindVertexArray(0);*/
 
         checkGLError();
 
@@ -218,7 +218,9 @@ auto setupOpenGL(ManagedWindow managedWindow) {
     };
 
     // Begin OpenGL stuff
-
+    int nrAttributes;
+    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes);
+    std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;
     glViewport(0, 0, HEIGHT, WIDTH);
     auto shaderPart = setupShaders();
     auto bufferPart = setupBuffers();
@@ -227,14 +229,14 @@ auto setupOpenGL(ManagedWindow managedWindow) {
 
 void loop(ManagedWindow& managedWindow, ShaderPart& shader, VertexBufferPart& data) {
     auto window = managedWindow.get();
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     while (!glfwWindowShouldClose(window)) {
         // Clear
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        glBindVertexArray(data.vao);
+        /*glBindVertexArray(data.vao);*/
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
 
         checkGLError();
         glfwSwapBuffers(window);
