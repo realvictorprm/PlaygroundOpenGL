@@ -10,7 +10,7 @@ function buildGLFW()
 	local dir = os.getcwd()
 	os.chdir("submodules/glfw")
 	filter "system:windows"
-		os.execute("cmake -DBUILD_SHARED_LIBS=OFF -G \"Visual Studio 14 2015 Win64\"")
+		os.execute("cmake -DBUILD_SHARED_LIBS=OFF -G \"Visual Studio 15 2017 Win64\"")
 		os.execute("msbuild GLFW.sln /p:Configuration=Release")
 	os.chdir(dir)
 end
@@ -25,6 +25,10 @@ end
 
 function includeGLM()
 	includedirs "submodules/glm/glm"
+end
+
+function includeOGLPlus()
+	includedirs "deps/"
 end
 
 function includeAndAddGlad()

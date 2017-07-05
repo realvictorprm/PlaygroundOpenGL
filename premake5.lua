@@ -10,18 +10,21 @@ workspace "GraphicsProgramming"
 project "FirstChapter"
 	kind "ConsoleApp"
 	location "src/FirstChapter"
+	debugdir "src/FirstChapter/bin/%{cfg.longname}"
 	targetdir "src/FirstChapter/bin/%{cfg.longname}"
 	files {
 		"src/FirstChapter/*.h", 
 		"src/FirstChapter/*.c", 
 		"src/FirstChapter/*.cpp", 
-		"src/FirstChapter/*.hpp" }
+		"src/FirstChapter/*.hpp",
+		"src/shaders/FirstChapter/*.*"}
 		
 	includeGLFW()
 	linkGLFW()
 	
 	includeGLM()
 	includeAndAddGlad()	
+	includeOGLPlus()
 	
 	filter { "system:windows" }
 		links { "OpenGL32" }
