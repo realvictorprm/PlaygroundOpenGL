@@ -12,8 +12,7 @@ echo %cmd%
 
 :choice
 set /P C="Choice: "
-if "%C%"=="2" goto vs2017
-if "%C%"=="1" goto vs2015
+if "%C%"=="1" goto vs2017
 if "%C%"=="0" goto clean
 
 

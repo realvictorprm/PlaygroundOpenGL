@@ -6,6 +6,28 @@ function progress(total, current)
   print("Download progress (" .. percent .. "%/100%)")
 end
 
+function buildAssimp()
+	local dir = os.getcwd()
+	os.chdir("external/assimp")
+	if(os.is("Windows")) then
+		os.execute("cmake -DBUILD_SHARED_LIBS=OFF -G \"Visual Studio 15 2017 Win64\"")
+		os.execute("msbuild assimp.sln /p:Configuration=Release")
+	else
+		os.execute("cmake -DBUILD_SHARED_LIBS=OFF -G \"Unix Makefiles\"")
+		os.execute("make")
+	end
+	os.chdir(dir)
+end
+
+function includeAndLinkToAssimp()
+	includedirs "external/assimp/include"
+	if(os.is("Windows")) then
+		links "external/assimp/bin/Release/*.lib"
+	else
+		links "external/assimp/bin/Release/*.so"
+	end
+end
+
 function buildGLFW()
 	local dir = os.getcwd()
 	os.chdir("external/glfw")

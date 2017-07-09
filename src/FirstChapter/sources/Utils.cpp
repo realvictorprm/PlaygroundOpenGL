@@ -1,6 +1,6 @@
-#include "Utils.hpp"
+#include "../headers/Utils.hpp"
 
-auto createShader(std::string& shaderSource, int type) {
+std::optional<GLuint> createShader(std::string& shaderSource, int type) {
     auto shader = glCreateShader(type);
     auto shaderString = shaderSource.c_str();
     glShaderSource(shader, 1, &shaderString, nullptr);
@@ -8,12 +8,13 @@ auto createShader(std::string& shaderSource, int type) {
     int success;
     char infoLog[512];
     glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
-    if (success) return std::make_optional(shader);
+    if (success) 
+        return shader;
     else {
         glGetShaderInfoLog(shader, 512, NULL, infoLog);
         std::cerr << "error: " <<
             infoLog << std::endl;
-        return std::optional<GLuint>{};
+        return {};
     }
 }
 
@@ -49,7 +50,6 @@ Shader::Shader(filesystem::path & vertexShaderPath, filesystem::path & fragmentP
     }
     else
         throw std::exception("Path to shaders doesn't exist!");
-    
 }
 
 void Shader::use()

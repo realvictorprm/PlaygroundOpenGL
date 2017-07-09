@@ -1,4 +1,4 @@
-#include "main.hpp"
+#include "../headers/main.hpp"
 
 #define HEIGHT 800
 #define WIDTH 600
@@ -26,8 +26,8 @@ float vertices[] = {
     // positions          // colors           // texture coords
     0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   // top right
     0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   // bottom right
-    -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
-    -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // top left 
+    -0.5f, -0.5f, 0.0f,  0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   // bottom left
+    -0.5f,  0.5f, 0.0f,  1.0f, 1.0f, 0.0f,   0.0f, 1.0f    // top left 
 };
 
 float texCoords[] = {
@@ -207,7 +207,7 @@ void loop(ManagedWindow& managedWindow, Shader& shader, VertexBufferPart& data) 
 void wrappingFunction() {
     try { 
         auto managedWindow = init();
-        auto[shader, bufferPart] = setupOpenGL(managedWindow);
+        auto [shader, bufferPart] = setupOpenGL(managedWindow);
         loop(managedWindow, shader, bufferPart);
     }
     catch (std::exception& e) {
@@ -224,6 +224,7 @@ void wrappingFunction() {
 }
 
 int main() {
+    std::cout << "Helo world!" << std::endl;
     wrappingFunction();
     system("pause");
     return 0;

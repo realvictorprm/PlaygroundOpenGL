@@ -6,6 +6,7 @@ workspace "GraphicsProgramming"
 	architecture "x86_64"
 	language "C++"
 	buildGLFW()
+	buildAssimp()
 
 project "FirstChapter"
 	kind "ConsoleApp"
@@ -13,10 +14,10 @@ project "FirstChapter"
 	debugdir "src/FirstChapter/bin/%{cfg.longname}"
 	targetdir "src/FirstChapter/bin/%{cfg.longname}"
 	files {
-		"src/FirstChapter/*.h", 
-		"src/FirstChapter/*.c", 
-		"src/FirstChapter/*.cpp", 
-		"src/FirstChapter/*.hpp",
+		"src/FirstChapter/**.h", 
+		"src/FirstChapter/**.c", 
+		"src/FirstChapter/**.cpp", 
+		"src/FirstChapter/**.hpp",
 		"src/shaders/FirstChapter/*.*"}
 		
 	includeGLFW()
@@ -24,6 +25,7 @@ project "FirstChapter"
 	includeGLM()
 	includeAndAddGlad()	
 	includeOGLPlus()
+	includeAndLinkToAssimp()
 	
 	if (os.is("Windows")) then
 		links { "OpenGL32" }
