@@ -5,6 +5,7 @@
 #include <iostream>
 #include <memory>
 #include <vector>
+#include <thread>
 #include <functional>
 #include <fstream>
 #include <string>
@@ -25,9 +26,10 @@
 
 // library includes
 #include <glad\glad.h>
+#define GLFW_INCLUDE_NONE
 #include <glfw3.h>
 #include <glm.hpp>
 #include <oglplus/gl.hpp>
 #include <oglplus/all.hpp>
-#include <stb_image.h>
+
 #endif
