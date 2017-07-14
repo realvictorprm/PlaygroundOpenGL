@@ -1,7 +1,7 @@
 #include "../headers/main.hpp"
 
 #define TUPLE std::make_tuple
-typedef std::chrono::duration<int, std::ratio<1, 60>> frame_duration;
+typedef std::chrono::duration<int, std::ratio<1, 30>> frame_duration;
 
 auto TryOrFailwith(std::function<bool(void)> fun, const char* msg){
     auto success = false;
@@ -17,8 +17,6 @@ auto TryOrFailwith(std::function<bool(void)> fun, const char* msg){
         std::exit(-1);
     }
 }
-
-
 
 //float vertices[] = {
 //    // positions          // colors           // texture coords
@@ -117,7 +115,7 @@ ManagedWindow init() {
     glfwSetErrorCallback([](int a, const char* msg) {std::cerr << "GLFW error occured, code " << a << ", message: " << msg << std::endl; });
     std::cout << "GLFW init result is " << res << std::endl;
     const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
-    auto managedWindow = createManagedWindow(glfwCreateWindow(mode->width, mode->height, "Test", glfwGetPrimaryMonitor(), nullptr));
+    auto managedWindow = createManagedWindow(glfwCreateWindow(mode->width, mode->height, "Test", nullptr, nullptr));
     auto window = managedWindow.get();
     glfwMakeContextCurrent(window);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
@@ -247,22 +245,26 @@ void loop(ManagedWindow& managedWindow, Shader& lightShader, Shader& lampShader,
             camera.ProcessKeyboard(Camera_Movement::UP, dt);
         if (glfwGetKey(window, GLFW_KEY_LEFT_CONTROL) == GLFW_PRESS)
             camera.ProcessKeyboard(Camera_Movement::DOWN, dt);
-    };
-
+    }; 
     auto drawGL =  [&]() {
         // Clear
         glClearColor(0.1f, 0.3f, 0.8f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glm::mat4 model = glm::mat4();
+        glm::mat4 model, normalModel;
         lightShader.use();
         //model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.f), glm::vec3(0.5f, 1.0f, 0.0f));
+        normalModel = glm::transpose(glm::inverse(model));
         lightShader.setMat4("model", model);
+        lightShader.setMat4("normalModel", normalModel);
         lightShader.setMat4("view", camera.GetViewMatrix());
         lightShader.setFloat("time", (float)glfwGetTime());
         lightShader.setVec3("viewPos", camera.Position);
-        GOLD.use(lightShader);
+        Material::use(GOLD, lightShader);
         glDrawArrays(GL_TRIANGLES, 0, 36);
-
+        model = glm::translate(model, glm::vec3(5., 0., 0.));
+        lightShader.setMat4("model", model);
+        Material::use(COPPER, lightShader);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
         lampShader.use();
         model = glm::translate(glm::mat4(), lightPos);
         lampShader.setMat4("model", model);
@@ -289,7 +291,7 @@ void loop(ManagedWindow& managedWindow, Shader& lightShader, Shader& lampShader,
         glfwPollEvents();
         processInput(0.01f, xBefore, yBefore);
         processing_time = std::chrono::steady_clock::now() - start_time;
-        //std::cout << processing_time.count() << std::endl;
+        // std::cout << processing_time.count() << std::endl;
         std::tie(xBefore, yBefore) = getMousePos();
         std::this_thread::sleep_until(end_time);
     }
@@ -306,13 +308,10 @@ void wrappingFunction() {
         std::cerr << "Application was stopped due to an error" << std::endl;
         std::cerr << e.what() << std::endl;
     }
-    /*catch (...) {
-        std::cerr << "Caught unkown runtime error!" << std::endl;
-    }*/
 }
 
 int main() {
-    std::cout << "Helo world!" << std::endl;
+    std::cout << "Hello world!" << std::endl;
     wrappingFunction();
     system("pause");
     return 0;

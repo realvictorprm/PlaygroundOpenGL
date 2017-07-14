@@ -88,3 +88,8 @@ void Shader::setVec3(const std::string &name, float x, float y, float z) const
 {
     glUniform3f(glGetUniformLocation(this->ID, name.c_str()), x, y, z);
 }
+
+void Shader::use(const Shader & shader)
+{
+    glUseProgram(shader.ID);
+}
