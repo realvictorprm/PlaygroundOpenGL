@@ -12,7 +12,7 @@
     
     <title>
         
-            First post | 
+            First showcase | 
         
         Learn graphics programming
     </title>
@@ -67,18 +67,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://realvictorprm.github.io/PlaygroundOpenGL">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="First post | Learn graphics programming">
+    <meta property="og:title" content="First showcase | Learn graphics programming">
     <meta property="og:image" content="/PlaygroundOpenGL/img/favicon.png" />
     <meta property="og:description" content="">
     
 
     
-        <meta property="article:published_time" content="Mon Jul 17 2017 17:18:37 GMT+0200" />
-        <meta property="article:modified_time" content="Mon Jul 17 2017 17:19:35 GMT+0200" />
+        <meta property="article:published_time" content="Mon Jul 17 2017 17:33:21 GMT+0200" />
+        <meta property="article:modified_time" content="Mon Jul 17 2017 19:00:22 GMT+0200" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="First post | Learn graphics programming">
+    <meta name="twitter:title" content="First showcase | Learn graphics programming">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/PlaygroundOpenGL/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -86,7 +86,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/17/First-post/index.html" />
+        <link rel="canonical" href="https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/17/First-showcase/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -112,10 +112,10 @@
         },
         "description": "Hi, nice to meet you"
     },
-    "headline": "First post",
-    "url": "https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/17/First-post/index.html",
-    "datePublished": "Mon Jul 17 2017 17:18:37 GMT+0200",
-    "dateModified": "Mon Jul 17 2017 17:19:35 GMT+0200",
+    "headline": "First showcase",
+    "url": "https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/17/First-showcase/index.html",
+    "datePublished": "Mon Jul 17 2017 17:33:21 GMT+0200",
+    "dateModified": "Mon Jul 17 2017 19:00:22 GMT+0200",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -339,7 +339,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Basic-lighting-materials"><span class="post-toc-number">1.</span> <span class="post-toc-text">Basic lighting, materials</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Loading-models"><span class="post-toc-number">2.</span> <span class="post-toc-text">Loading models</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Skyboxes-environment-mapping-dynamics"><span class="post-toc-number">3.</span> <span class="post-toc-text">Skyboxes, environment mapping, dynamics</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Static-and-dynamic-environment-mapping"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Static and dynamic environment mapping</span></a></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -377,7 +377,7 @@
         
     
             <p class="article-headline-p">
-                First post
+                First showcase
             </p>
         </div>
 
@@ -439,7 +439,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=First post&url=https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/17/First-post/index.html&via=Victor Peter Rouven Müller" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=First showcase&url=https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/17/First-showcase/index.html&via=Victor Peter Rouven Müller" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -469,7 +469,47 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Hello fellow devs out there, this is my first blog post for the learn graphics programming repository.<br>I’ll track here my progress, what I’m doing, maybe some tutorials too on how to do this and that, stay tuned!</p>
+        <p>With this repo here I finally started getting deeper into graphics programming and so I already can show some results.</p>
+<p>To get into OpenGL I’ve used the incredible good tutorials found <a href="https://learnopengl.com" target="_blank" rel="external">here</a>.</p>
+<h2 id="Basic-lighting-materials"><a href="#Basic-lighting-materials" class="headerlink" title="Basic lighting, materials"></a>Basic lighting, materials</h2><p>I’ve made my way through those basic parts and produced nice colored cubes.<br>During my experiments with the lighting I ran into some minor bugs in the specular shading</p>
+<img src="/PlaygroundOpenGL/2017/07/17/First-showcase/Fail.gif" alt="[inverted_specular_shading]" title="[inverted_specular_shading]">
+<p>Reason for this was, that my material data wasn’t multiplied as stated at this <a href="http://devernay.free.fr/cours/opengl/materials.html" target="_blank" rel="external">site</a> (where I’ve picked the data).<br>This resulted in inverted specular shading due to that my numbers were instead of above <em>1.0</em> under <em>1.0</em>.</p>
+<p>After fixing this bug I went over to the next exciting topics. </p>
+<h2 id="Loading-models"><a href="#Loading-models" class="headerlink" title="Loading models"></a>Loading models</h2><p>I guess this is one of the most important milestones in self-study sessions about graphics programming.<br>However it’s also one of the most annoying topics because there are plenty of 3d model formats. Thankfully there is a library called (assimp)[] which abstracts this for us.</p>
+<p>The tutorial provided nice loading code (well compatible with the generated data structures during our sessions) which I instantly adopted because I’m lazy.<br>Nevertheless I was active enough to give the code a more functional style ignoring the object style.</p>
+<p>Moreover it worked without big problems so I loaded in the example model from the tutorial. Instead of the popular teapot or monkeys or whateverelse-is-popular-out-there we loaded in a model from the more or less popular game crisis. </p>
+<img src="/PlaygroundOpenGL/2017/07/17/First-showcase/crisis_model.png" alt="[crisis_model]" title="[crisis_model]">
+<p>This is from a few days ago and you see that the lighting is pretty fine. Could be better yeah.</p>
+<p>What’s next? More interesting topics like skyboxes!</p>
+<h2 id="Skyboxes-environment-mapping-dynamics"><a href="#Skyboxes-environment-mapping-dynamics" class="headerlink" title="Skyboxes, environment mapping, dynamics"></a>Skyboxes, environment mapping, dynamics</h2><p>After nice model loading I went back to my nice cube starting to implement some skybox support. Of course the tutorial helped here again, telling us what is needed.<br>We had a lesson about cubemaps and simple reflection mathematics (which weren’t that unfamiliar to me) which resulted finally in this.</p>
+<img src="/PlaygroundOpenGL/2017/07/17/First-showcase/first_skybox_rendering.png" alt="[first_skybox_rendering]" title="[first_skybox_rendering]">
+<p>This time we see a nice cup (unfortunately without any coffee!) which was made by a friend of mine, Benjamin.<br>The cup doesn’t reflect anything yet but this was just a proove of concept (both for the skybox and the model loading code).</p>
+<h3 id="Static-and-dynamic-environment-mapping"><a href="#Static-and-dynamic-environment-mapping" class="headerlink" title="Static and dynamic environment mapping"></a>Static and dynamic environment mapping</h3><p>After I noticed it works, I went over to add some reflection mechanics to the fragment shader.<br>The algorithm here used was static environment mapping. It just uses a cubemap (here the skybox) to get data about the environment. The results are some static reflections. </p>
+<p>Unfortunately I didn’t grabbed any picture of this one. Sorry :-(<br>However more interesting were the dynamic reflections which I added afterwards without further tutorial help. The algorithm there is called dynamic environment mapping.</p>
+<p>It wasn’t that difficult to achieve dynamic environment mapping. It works in general like this (with some important notes from me):</p>
+<ol>
+<li>Render the scene offscreen to a cubemap, keep in mind to use here the skybox as initial cubemap.</li>
+</ol>
+<ul>
+<li>Use a 90° projection matrix, the resulting images must create a cube.</li>
+<li>Keep in mind that cube map images must have the <em>same width and height</em>!</li>
+<li>You need to render the scene 6-times, each time looking into a different direction! (front, back, left, right, top, bottom)</li>
+<li>Only the position of the camera is needed, you can safely ignore the rotation. Of course this only applies if you’re calculating the reflection vectors without respecting camera rotation (which you normaly do to reduce any confusion, we want to stay always in the same virtual system).</li>
+</ul>
+<ol>
+<li>Render the scene a second time but use the resulting cubemap from the first rendering.</li>
+</ol>
+<ul>
+<li>If you’re using OpenGL don’t forget to reset the framebuffer index so you’re rendering to the real screen and not <em>off-screen</em>! </li>
+</ul>
+<ol>
+<li>Enjoy the results (if you rendered correctly to the cubemap).</li>
+</ol>
+<ul>
+<li>No popcorn yet!</li>
+</ul>
+<img src="/PlaygroundOpenGL/2017/07/17/First-showcase/ReflectionTest3.gif" alt="[ReflectionTest3]" title="[ReflectionTest3]">
+<p>You can see that the reflections work quite nicely.</p>
 
     
 
@@ -489,19 +529,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/PlaygroundOpenGL/2017/07/17/First-showcase/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Newer
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/PlaygroundOpenGL/2017/07/17/First-post/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
