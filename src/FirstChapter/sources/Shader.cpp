@@ -2,7 +2,7 @@
 #include "..\..\..\deps\oglplus\shader.hpp"
 using namespace std::experimental;
 
-std::optional<GLuint> createShader(std::string& shaderSource, int type) {
+std::optional<GLuint> createShader(std::string shaderSource, int type) {
     auto shader = glCreateShader(type);
     auto shaderString = shaderSource.c_str();
     glShaderSource(shader, 1, &shaderString, nullptr);

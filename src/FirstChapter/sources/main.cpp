@@ -27,47 +27,118 @@ auto TryOrFailwith(std::function<bool(void)> fun, const char* msg){
 //};
 
 float vertices[] = {
-    -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-    0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-    0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-    0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-    -0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
-    -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f,
+    -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
+    0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
+    0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
+    0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
+    -0.5f,  0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
+    -0.5f, -0.5f, -0.5f,  0.0f,  0.0f, -1.0f, 
 
-    -0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
-    0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
-    0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
-    0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
-    -0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
-    -0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f,
+    -0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f, 
+    0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f, 
+    0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f, 
+    0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f, 
+    -0.5f,  0.5f,  0.5f,  0.0f,  0.0f, 1.0f, 
+    -0.5f, -0.5f,  0.5f,  0.0f,  0.0f, 1.0f, 
 
-    -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
-    -0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
-    -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
-    -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f,
-    -0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
-    -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f,
+    -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f, 
+    -0.5f,  0.5f, -0.5f, -1.0f,  0.0f,  0.0f, 
+    -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f, 
+    -0.5f, -0.5f, -0.5f, -1.0f,  0.0f,  0.0f, 
+    -0.5f, -0.5f,  0.5f, -1.0f,  0.0f,  0.0f, 
+    -0.5f,  0.5f,  0.5f, -1.0f,  0.0f,  0.0f, 
 
-    0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
-    0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
-    0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
-    0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f,
-    0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
-    0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f,
+    0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f, 
+    0.5f,  0.5f, -0.5f,  1.0f,  0.0f,  0.0f, 
+    0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f, 
+    0.5f, -0.5f, -0.5f,  1.0f,  0.0f,  0.0f, 
+    0.5f, -0.5f,  0.5f,  1.0f,  0.0f,  0.0f, 
+    0.5f,  0.5f,  0.5f,  1.0f,  0.0f,  0.0f, 
 
-    -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
-    0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
-    0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
-    0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
-    -0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f,
-    -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f,
+    -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f, 
+    0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f, 
+    0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f, 
+    0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f, 
+    -0.5f, -0.5f,  0.5f,  0.0f, -1.0f,  0.0f, 
+    -0.5f, -0.5f, -0.5f,  0.0f, -1.0f,  0.0f, 
 
-    -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
-    0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,
-    0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
-    0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
-    -0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f,
+    -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f, 
+    0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f, 
+    0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f, 
+    0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f, 
+    -0.5f,  0.5f,  0.5f,  0.0f,  1.0f,  0.0f, 
     -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
+};
+
+float skyboxVertices[] = {
+    // positions          
+    -1.0f,  1.0f, -1.0f,
+    -1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+    1.0f,  1.0f, -1.0f,
+    -1.0f,  1.0f, -1.0f,
+
+    -1.0f, -1.0f,  1.0f,
+    -1.0f, -1.0f, -1.0f,
+    -1.0f,  1.0f, -1.0f,
+    -1.0f,  1.0f, -1.0f,
+    -1.0f,  1.0f,  1.0f,
+    -1.0f, -1.0f,  1.0f,
+
+    1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f,  1.0f,
+    1.0f,  1.0f,  1.0f,
+    1.0f,  1.0f,  1.0f,
+    1.0f,  1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+
+    -1.0f, -1.0f,  1.0f,
+    -1.0f,  1.0f,  1.0f,
+    1.0f,  1.0f,  1.0f,
+    1.0f,  1.0f,  1.0f,
+    1.0f, -1.0f,  1.0f,
+    -1.0f, -1.0f,  1.0f,
+
+    -1.0f,  1.0f, -1.0f,
+    1.0f,  1.0f, -1.0f,
+    1.0f,  1.0f,  1.0f,
+    1.0f,  1.0f,  1.0f,
+    -1.0f,  1.0f,  1.0f,
+    -1.0f,  1.0f, -1.0f,
+
+    -1.0f, -1.0f, -1.0f,
+    -1.0f, -1.0f,  1.0f,
+    1.0f, -1.0f, -1.0f,
+    1.0f, -1.0f, -1.0f,
+    -1.0f, -1.0f,  1.0f,
+    1.0f, -1.0f,  1.0f
+};
+
+
+std::experimental::filesystem::path vertexPath("../../../shaders/FirstChapter/SimpleLight.vert");
+std::experimental::filesystem::path fragmentPath("../../../shaders/FirstChapter/SimpleLight.frag");
+
+std::experimental::filesystem::path lampVertexPath("../../../shaders/FirstChapter/SimpleLamp.vert");
+std::experimental::filesystem::path lampFragmentPath("../../../shaders/FirstChapter/SimpleLamp.frag");
+
+std::experimental::filesystem::path skyboxVertexPath("../../../shaders/FirstChapter/SimpleSkybox.vert");
+std::experimental::filesystem::path skyboxFragmentPath("../../../shaders/FirstChapter/SimpleSkybox.frag");
+
+struct DynamicEnvironmentMap {
+    GLuint framebuffer;
+    GLuint cubemap;
+};
+
+struct ApplicationData {
+    Shader lightShader;
+    Shader lampShader;
+    Shader skyboxShader;
+    std::vector<Model> models;
+    std::vector<VertexBufferPart> buffers;
+    std::vector<Texture> textures;
+    Cubemap skybox;
+    DynamicEnvironmentMap map;
 };
 
 // logs every gl call to the console
@@ -120,6 +191,7 @@ ManagedWindow init() {
     glfwMakeContextCurrent(window);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     auto ret = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     if (!ret) throw new std::runtime_error("Error initializing OpenGL functions");
@@ -169,6 +241,25 @@ auto setupOpenGL(ManagedWindow managedWindow) {
 
         // Unbind the buffers for safety reasons
         glBindBuffer(GL_ARRAY_BUFFER, 0);
+        glBindVertexArray(0);
+
+        checkGLError();
+        std::cout << "created vao" << std::endl;
+        return VertexBufferPart{ VAO, VBO };
+    };
+
+    auto setupSkybox = []() {
+        unsigned int VBO, VAO;
+        glGenVertexArrays(1, &VAO);
+        glGenBuffers(1, &VBO);
+        glBindVertexArray(VAO);
+
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), skyboxVertices, GL_STATIC_DRAW);
+
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+        glEnableVertexAttribArray(0);
+        glBindVertexArray(0);
 
         checkGLError();
         return VertexBufferPart{ VAO, VBO };
@@ -185,24 +276,71 @@ auto setupOpenGL(ManagedWindow managedWindow) {
     glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes);
     std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;
     glEnable(GL_DEPTH_TEST);
-    std::experimental::filesystem::path vertexPath("../../../shaders/FirstChapter/SimpleLight.vert");
-    std::experimental::filesystem::path fragmentPath("../../../shaders/FirstChapter/SimpleLight.frag");
-    std::experimental::filesystem::path vertexPath2("../../../shaders/FirstChapter/SimpleLamp.vert");
-    std::experimental::filesystem::path fragmentPath2("../../../shaders/FirstChapter/SimpleLamp.frag");
 
     auto bufferPart = setupBuffers();
     auto textures = setupTextures();
     Shader lightShader(vertexPath, fragmentPath);
-    Shader lampShader(vertexPath2, fragmentPath2);
+    Shader lampShader(lampVertexPath, lampFragmentPath);
+    Shader skyboxShader(skyboxVertexPath, skyboxFragmentPath);
     lightShader.use();
-    return make_tuple(lightShader, lampShader, bufferPart, textures);
+    auto buffers = { bufferPart, setupSkybox() };
+    auto relativeModelPath = std::experimental::filesystem::path("../../../../models/tasse/Tasse.obj");
+    auto absModelPath = std::experimental::filesystem::canonical(relativeModelPath);
+    auto model = Model::load(absModelPath.generic_string());
+    auto skyboxPath = std::string("../../../../resources/skybox/");
+    std::array<std::string, 6> skyboxTextures{ 
+        skyboxPath + "right.jpg",
+        skyboxPath + "left.jpg",
+        skyboxPath + "top.jpg",
+        skyboxPath + "bottom.jpg",
+        skyboxPath + "back.jpg",
+        skyboxPath + "front.jpg"
+    };
+    auto skybox = Cubemap::create(skyboxTextures);
+    
+    unsigned int fbo;
+    glGenFramebuffers(1, &fbo);
+
+    const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+    GLuint cubemap;
+    glGenTextures(1, &cubemap);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, cubemap);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+    for (unsigned int i = 0; i < 6; i++) {
+        glTexImage2D(
+            GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
+            0, GL_RGBA, mode->width, mode->width, 0, GL_RGBA, GL_UNSIGNED_BYTE, NULL);
+    }
+    glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
+    checkGLError();
+    return ApplicationData{ 
+        lightShader, lampShader, skyboxShader, 
+        std::vector<Model>{ model }, buffers, textures, skybox,
+        DynamicEnvironmentMap{fbo, cubemap}
+    };
 }
 
-void loop(ManagedWindow& managedWindow, Shader& lightShader, Shader& lampShader, VertexBufferPart& data, std::vector<Texture> textures) {
+void loop(ManagedWindow& managedWindow, ApplicationData& d) {
     auto window = managedWindow.get();
+    auto lightShader = d.lightShader;
+    auto lampShader = d.lampShader;
+    auto textures = d.textures;
 
+    auto model = d.models.front();
+    auto data = d.buffers.front();
+
+    auto skyboxData = d.buffers[1];
+    auto skyboxShader = d.skyboxShader;
+    checkGLError();
+
+    std::mutex glOperationRunning;
+    
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glBindVertexArray(data.vao);
+    /*glBindVertexArray(data.vao);*/
     //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, data.ebo);
 
     glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
@@ -210,13 +348,14 @@ void loop(ManagedWindow& managedWindow, Shader& lightShader, Shader& lampShader,
     Camera camera;
 
     glm::mat4 projection;
-    projection = glm::perspective(glm::radians(45.0f), (float)100. / (float)100., 0.1f, 100.0f);
+    projection = glm::perspective(glm::radians(45.0f), (float)100. / (float)100., 0.01f, 100.0f);
 
+    lightShader.use();
     lightShader.setMat4("projection", projection);
     lightShader.setVec3("lightPos", lightPos);
-    lightShader.setVec3("objectColor", 1.0f, 0.5f, 0.31f);
-    lightShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
-
+    lightShader.setVec3("objectColor", 1.f, 1.f, 1.f);
+    lightShader.setVec3("lightColor", 1.f, 1.0f, 1.0f);
+    const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 
     auto getMousePos = [&]{
         double xpos, ypos;
@@ -232,7 +371,7 @@ void loop(ManagedWindow& managedWindow, Shader& lightShader, Shader& lampShader,
             camera.ProcessMouseMovement(dx, dy);
         }
         if (glfwGetKey(window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS)
-            dt *= 3;
+            dt *= 3.;
         if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
             camera.ProcessKeyboard(Camera_Movement::FORWARD, dt);
         if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
@@ -250,46 +389,176 @@ void loop(ManagedWindow& managedWindow, Shader& lightShader, Shader& lampShader,
         // Clear
         glClearColor(0.1f, 0.3f, 0.8f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glm::mat4 model, normalModel;
+        auto radians = [] (float degree) {
+            return (degree * AI_MATH_PI_F) / 180.f;
+        };
+        glDepthMask(GL_FALSE);
+        skyboxShader.use();
+        Cubemap::use(d.skybox);
+        skyboxShader.setMat4("projection", projection);
+        skyboxShader.setMat4("view", glm::mat4(glm::mat3(camera.GetViewMatrix())));
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        glDepthMask(GL_TRUE);
+        glBindFramebuffer(GL_FRAMEBUFFER, d.map.framebuffer);
+        /*unsigned int rbo;
+        glGenRenderbuffers(1, &rbo);
+        glBindRenderbuffer(GL_RENDERBUFFER, rbo);
+        glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, mode->width, mode->height);
+        glBindRenderbuffer(GL_RENDERBUFFER, 0);
+        glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);*/
+        auto mappingProjection = glm::perspective(glm::radians(90.f), (float)100. / (float)100., 0.01f, 100.0f);
+        skyboxShader.setMat4("projection", mappingProjection);
+        float translationValues[]{
+            // pitch, yaw
+            0., 0., // right
+            0., 90, // left
+            90., 0., // top
+            -90., 0., // bottom
+            0., -90., // back
+            0., 180. // front
+        };
+        glViewport(0, 0, mode->width, mode->width);
+        for (unsigned int i = 0; i < 6; i++) {
+            glFramebufferTexture2D(
+                GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, d.map.cubemap, 0
+            );
+            if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != (GLuint)oglplus::FramebufferStatus::Complete) {
+                auto status = oglplus::Framebuffer::Status(oglplus::FramebufferTarget::Draw);
+                std::cout << oglplus::EnumValueName(status) << std::endl;
+                std::cout << "ERROR::FRAMEBUFFER:: Framebuffer is not complete!" << std::endl;
+            }
+            glClearColor(0.0f, 0.9f, 0.8f, 1.0f);
+            if (i = 5) {
+                glClearColor(1.0f, 0.f, 0.f, 1.0f);
+            }
+            glClear(GL_COLOR_BUFFER_BIT);
+            skyboxShader.use();
+            auto mappingCamera = Camera(camera);
+            mappingCamera.Pitch = translationValues[2 * i];
+            mappingCamera.Yaw = translationValues[2 * i + 1];
+            auto untranslatedViewMat = glm::mat4(glm::mat3(mappingCamera.GetViewMatrix()));
+            // glm::rotate(untranslatedViewMat, radians(90.), glm::vec3(1.0, 0., 0.))
+            skyboxShader.setMat4("view", untranslatedViewMat);
+            Cubemap::use(d.skybox);
+            glDepthMask(GL_FALSE);
+            glBindVertexArray(skyboxData.vao);
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+            glDepthMask(GL_TRUE);
+
+            lightShader.use();
+            Cubemap::use(d.skybox);
+            glm::mat4 m = glm::translate(glm::mat4(), glm::vec3(0.0f, -1.75f, -10.0f)); // translate it down so it's at the center of the scene
+            m = glm::scale(m, glm::vec3(10., 10., 5.));
+            glm::mat4 normalModel = glm::transpose(glm::inverse(m));
+            Material::use(WHITE, lightShader);
+            lightShader.setMat4("model", m);
+            lightShader.setMat4("normalModel", normalModel);
+            lightShader.setMat4("view", mappingCamera.GetViewMatrix());
+            //model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.f), glm::vec3(0.5f, 1.0f, 0.0f));
+
+            lightShader.setFloat("time", (float)glfwGetTime());
+            lightShader.setVec3("viewPos", mappingCamera.Position);
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+
+            lampShader.use();
+            glBindVertexArray(data.vao);
+            auto model = glm::translate(glm::translate(glm::mat4(), lightPos), glm::vec3(2. * sin(glfwGetTime()), 1. * cos(glfwGetTime()), 0.));
+            lampShader.setMat4("model", model);
+            lampShader.setMat4("view", mappingCamera.GetViewMatrix());
+            lampShader.setMat4("projection", mappingProjection);
+            lampShader.setFloat("time", (float)glfwGetTime());
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+            checkGLError();
+        }
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        glViewport(0, 0, mode->width, mode->height);
+        
         lightShader.use();
-        //model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.f), glm::vec3(0.5f, 1.0f, 0.0f));
-        normalModel = glm::transpose(glm::inverse(model));
-        lightShader.setMat4("model", model);
+        lightShader.setBool("useTexture", true);
+        lightShader.setInt("texture_specular1", 2);
+        glBindTexture(GL_TEXTURE_2D, d.textures[0].ID);
+        glm::mat4 m = glm::translate(glm::mat4(), glm::vec3(0.0f, -1.75f, -10.0f)); // translate it down so it's at the center of the scene
+        m = glm::scale(m, glm::vec3(10., 10., 5.));
+        glm::mat4 normalModel = glm::transpose(glm::inverse(m));
+        Material::use(WHITE, lightShader);
+        glBindTexture(GL_TEXTURE_CUBE_MAP, d.map.cubemap);
+        lightShader.setMat4("model", m);
         lightShader.setMat4("normalModel", normalModel);
         lightShader.setMat4("view", camera.GetViewMatrix());
+        //model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.f), glm::vec3(0.5f, 1.0f, 0.0f));
+        
         lightShader.setFloat("time", (float)glfwGetTime());
         lightShader.setVec3("viewPos", camera.Position);
-        Material::use(GOLD, lightShader);
+        //Material::use(GOLD, lightShader);
         glDrawArrays(GL_TRIANGLES, 0, 36);
-        model = glm::translate(model, glm::vec3(5., 0., 0.));
-        lightShader.setMat4("model", model);
-        Material::use(COPPER, lightShader);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        
         lampShader.use();
-        model = glm::translate(glm::mat4(), lightPos);
+        glBindVertexArray(data.vao);
+        auto model = glm::translate(glm::translate(glm::mat4(), lightPos), glm::vec3(2. * sin(glfwGetTime()), 1. * cos(glfwGetTime()), 0.));
         lampShader.setMat4("model", model);
         lampShader.setMat4("view", camera.GetViewMatrix());
         lampShader.setMat4("projection", projection);
+        lampShader.setFloat("time", (float)glfwGetTime());
         glDrawArrays(GL_TRIANGLES, 0, 36);
-        //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
     };
 
     auto start_time = std::chrono::steady_clock::now();
     auto end_time = start_time + frame_duration(1);
     auto processing_time = start_time - std::chrono::steady_clock::now();
     auto[xBefore, yBefore] = std::make_tuple( 400., 300. );
+
+    //std::thread shaderFileChecker([&] {
+    //    auto start_time = std::chrono::steady_clock::now();
+    //    auto end_time = start_time + frame_duration(10);
+    //    auto lastWriteTime = [](std::experimental::filesystem::path& p) {return std::experimental::filesystem::last_write_time(p); };
+    //    auto lastTimeModifiedV = lastWriteTime(vertexPath);
+    //    auto lastTimeModifiedF = lastWriteTime(fragmentPath);
+    //    while (!glfwWindowShouldClose(window)) {
+    //        start_time = std::chrono::steady_clock::now();
+    //        end_time = start_time + frame_duration(10);
+    //        if (lastTimeModifiedV != lastWriteTime(vertexPath) || lastTimeModifiedF != lastWriteTime(fragmentPath)) {
+    //            // reload shaders
+    //            Shader s(vertexPath, fragmentPath);
+    //            glOperationRunning.lock();
+    //            lightShader = s;
+    //            glOperationRunning.unlock();
+    //            lastTimeModifiedV = lastWriteTime(vertexPath);
+    //            lastTimeModifiedF = lastWriteTime(fragmentPath);
+    //        }
+    //        std::this_thread::sleep_until(end_time);
+    //    }
+    //});
+
+    auto lastWriteTime = [](std::experimental::filesystem::path& p) {return std::experimental::filesystem::last_write_time(p); };
+    auto lastTimeModifiedV = lastWriteTime(vertexPath);
+    auto lastTimeModifiedF = lastWriteTime(fragmentPath);
+
     while (!glfwWindowShouldClose(window)) {
         start_time = std::chrono::steady_clock::now();
         end_time = start_time + frame_duration(1);
-        drawGL();
-
-        //GLint colorLocation = glGetUniformLocation(shader.program, "globalTime");
-        //glUniform1f(colorLocation, (float)glfwGetTime());
-        //glDrawArrays(GL_TRIANGLES, 0, 3);
-        checkGLError();
-        glfwSwapBuffers(window);
+        if (glOperationRunning.try_lock()) {
+            drawGL();
+            checkGLError();
+            glfwSwapBuffers(window);
+            glOperationRunning.unlock();
+        }
+        if (lastTimeModifiedV != lastWriteTime(vertexPath) || lastTimeModifiedF != lastWriteTime(fragmentPath)) {
+            // reload shaders
+            Shader s(vertexPath, fragmentPath);
+            glOperationRunning.lock();
+            lightShader = s;
+            lightShader.use();
+            lightShader.setMat4("projection", projection);
+            lightShader.setVec3("lightPos", lightPos);
+            lightShader.setVec3("objectColor", 1.f, 1.f, 1.f);
+            lightShader.setVec3("lightColor", 1.f, 1.0f, 1.0f);
+            glOperationRunning.unlock();
+            lastTimeModifiedV = lastWriteTime(vertexPath);
+            lastTimeModifiedF = lastWriteTime(fragmentPath);
+        }
         glfwPollEvents();
-        processInput(0.01f, xBefore, yBefore);
+        processInput(0.2f, xBefore, yBefore);
         processing_time = std::chrono::steady_clock::now() - start_time;
         // std::cout << processing_time.count() << std::endl;
         std::tie(xBefore, yBefore) = getMousePos();
@@ -301,8 +570,8 @@ void loop(ManagedWindow& managedWindow, Shader& lightShader, Shader& lampShader,
 void wrappingFunction() {
     try { 
         auto managedWindow = init();
-        auto [lightShader, lampShader, bufferPart, textures] = setupOpenGL(managedWindow);
-        loop(managedWindow, lightShader, lampShader, bufferPart, textures);
+        auto applicationData = setupOpenGL(managedWindow);
+        loop(managedWindow, applicationData);
     }
     catch (std::exception& e) {
         std::cerr << "Application was stopped due to an error" << std::endl;

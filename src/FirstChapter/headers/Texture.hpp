@@ -9,6 +9,7 @@
 #include <string>
 #include <optional>
 #include <iostream>
+#include <array>
 
 class Texture {
 public:
@@ -17,6 +18,14 @@ public:
     Texture(const std::string& path);
 
     void SetActive();
+};
+
+struct Cubemap {
+    const unsigned int ID;
+
+    static Cubemap create(const std::array<std::string, 6>& texturePaths);
+
+    static void use(Cubemap& cubemap);
 };
 
 

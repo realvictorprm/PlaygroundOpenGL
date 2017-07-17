@@ -58,6 +58,13 @@ Material const SILVER {
     0.3f
 };
 
+Material const WHITE{
+    glm::vec3(1., 1., 1.),
+    glm::vec3(1., 1., 1.),
+    glm::vec3(0.1, 0.1, 0.1),
+    0.2f
+};
+
 
 
 #endif

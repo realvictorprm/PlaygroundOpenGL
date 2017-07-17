@@ -22,7 +22,11 @@ end
 function includeAndLinkToAssimp()
 	includedirs "external/assimp/include"
 	if(os.is("Windows")) then
-		links "external/assimp/bin/Release/*.lib"
+		links {
+		"external/assimp/bin/Release/assimp.lib",
+		"external/assimp/bin/Release/IrrXML.lib",
+		"external/assimp/bin/Release/zlibstatic.lib"
+		}
 	else
 		links "external/assimp/bin/Release/*.so"
 	end

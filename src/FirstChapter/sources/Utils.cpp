@@ -3,7 +3,7 @@
 std::optional<std::string> readCompleteFile(std::string filename)
 {
     auto file = std::ifstream(filename);
-    if (file.is_open()) {
+    if (file.is_open() && !file.bad()) {
         auto res = std::string();
         file.seekg(0, std::ios::end);
         res.reserve(file.tellg());
