@@ -12,7 +12,7 @@
     
     <title>
         
-            Archives: 2017/7 | 
+            Build tool change | 
         
         Learn graphics programming
     </title>
@@ -67,15 +67,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://realvictorprm.github.io/PlaygroundOpenGL">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archives: 2017/7 | Learn graphics programming">
+    <meta property="og:title" content="Build tool change | Learn graphics programming">
     <meta property="og:image" content="/PlaygroundOpenGL/img/favicon.png" />
     <meta property="og:description" content="">
     
 
     
+        <meta property="article:published_time" content="Mon Jul 17 2017 21:30:27 GMT+0200" />
+        <meta property="article:modified_time" content="Mon Jul 17 2017 21:54:56 GMT+0200" />
+    
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Archives: 2017/7 | Learn graphics programming">
+    <meta name="twitter:title" content="Build tool change | Learn graphics programming">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/PlaygroundOpenGL/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -83,13 +86,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/archives/2017/07/index.html" />
+        <link rel="canonical" href="https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/17/Build-tools/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Learn graphics programming",
+        "logo": "/PlaygroundOpenGL/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Victor Peter Rouven Müller",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/PlaygroundOpenGL/img/favicon.png"
+        },
+        "description": "Hi, nice to meet you"
+    },
+    "headline": "Build tool change",
+    "url": "https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/17/Build-tools/index.html",
+    "datePublished": "Mon Jul 17 2017 21:30:27 GMT+0200",
+    "dateModified": "Mon Jul 17 2017 21:54:56 GMT+0200",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://realvictorprm.github.io/PlaygroundOpenGL"
+    }
+}
+</script>
 
 
     
@@ -279,214 +312,208 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Short-look-into-common-C-build-tools"><span class="post-toc-number">1.</span> <span class="post-toc-text">Short look into common C++ build tools</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CMAKE"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">CMAKE </span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Premake"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Premake </span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Results"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Results</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/PlaygroundOpenGL/2017/07/17/Build-tools/">Build tool change</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/PlaygroundOpenGL/2017/07/17/Build-tools/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://avatars0.githubusercontent.com/u/25414896?v=4&amp;s=460" width="44px" height="44px" alt="Victor Peter Rouven Müller's avatar">
-            </div>
-            <div>
-                <strong>Victor Peter Rouven Müller</strong>
-                <span>Jul 17, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/PlaygroundOpenGL/2017/07/17/First-showcase/">First showcase</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            With this repo here I finally started getting deeper into graphics program...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/PlaygroundOpenGL/2017/07/17/First-showcase/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://avatars0.githubusercontent.com/u/25414896?v=4&amp;s=460" width="44px" height="44px" alt="Victor Peter Rouven Müller's avatar">
-            </div>
-            <div>
-                <strong>Victor Peter Rouven Müller</strong>
-                <span>Jul 17, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/PlaygroundOpenGL/2017/07/17/First-post/">First post</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Hello fellow devs out there, this is my first blog post for the learn grap...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/PlaygroundOpenGL/2017/07/17/First-post/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://avatars0.githubusercontent.com/u/25414896?v=4&amp;s=460" width="44px" height="44px" alt="Victor Peter Rouven Müller's avatar">
-            </div>
-            <div>
-                <strong>Victor Peter Rouven Müller</strong>
-                <span>Jul 17, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/PlaygroundOpenGL/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/PlaygroundOpenGL/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                Build tool change
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://avatars0.githubusercontent.com/u/25414896?v=4&s=460" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Victor Peter Rouven Müller</strong>
+        <span>Jul 17, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Build tool change&url=https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/17/Build-tools/index.html&via=Victor Peter Rouven Müller" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Short-look-into-common-C-build-tools"><a href="#Short-look-into-common-C-build-tools" class="headerlink" title="Short look into common C++ build tools"></a>Short look into common C++ build tools</h1><p>Build tools for C++ are still these days a difficult topic. To know them is very important because often you want to run conform with the rest of the world. </p>
+<h2 id="CMAKE"><a href="#CMAKE" class="headerlink" title="CMAKE "></a><a href="https://cmake.org" target="_blank" rel="external">CMAKE</a> <img src="https://cmake.org/wp-content/uploads/2014/06/slider-cmake.png" height="40"></h2><p align="justify"><br>These days mostly used build tool is definitely <em>CMAKE</em>. Heavy usage is seen e.g. with Qt and other big libraries.<br>CMAKE in detail consists mainly of a single file called <em>CMakeLists.txt</em> (sometimes some helper script files are added for seperation).<br>This file describes the library requirements, header requirements, include folders etc. However it’s only used to generate the final build script files like <em>GNU Makefiles</em> or <em>Visual Studio solution files</em> through inputing it into the cmake command line tool. In short, sounds like a good tool <em>but</em> the language used to write those description files (cmakelist.txt) is a <em>weird variation of bash</em>. Definitely it isn’t that comfortable to work with and so some people still prefer other build tools. Last note, using CMAKE requires that the client has CMAKE installed.<br></p>
+
+<h2 id="Premake"><a href="#Premake" class="headerlink" title="Premake "></a><a href="https://premake.github.io" target="_blank" rel="external">Premake</a> <img src="https://premake.github.io/premake-logo.png" height="40"></h2><p align="justify"><br>Another widely used tool is <em>premake</em>. Used by big game companies like <em>Blizzard</em> it’s definitely a tool to go. In general premake works the same like CMAKE however instead of using a weird variation of bash or other weird and uncomfortable languages it just makes usage of <em>Lua</em>. And so the build files are often very easy to write for normal developers because Lua is a widely know language without special knowledge requirements. Easy, simple, nice! Of course <em>premake</em> has some special functions and writings but it’s also very easy to understand. Nevertheless, best thing about <em>premake</em> is that it’s a lot easier to read compared to <em>CMAKE</em>. Unfortunately there are some reasons why <em>premake</em> isn’t as much used as <em>CMAKE</em>. One of those reasons is the lack of functionality e.g. passing special build command flags for the C++ compiler. Last note, using Premake requires the client <em>not</em> to have it installed. It’s often <em>shipped with the repository</em> as you may have noticed with mine.<br></p>
+
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>Due to the lack of selecting special C++ language version with Premake I’m pushed to switch the repositories build system to CMAKE. Unfortunately I’m using C++17 features which need special build flags. It’s really a bummer, <em>Premake</em> isn’t capable of this yet.. <em>yet</em> my friends!</p>
+<p>Now let’s work on switching the build system!</p>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/PlaygroundOpenGL/2017/07/17/First-showcase/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
