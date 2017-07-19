@@ -508,28 +508,6 @@ void loop(ManagedWindow& managedWindow, ApplicationData& d) {
     auto processing_time = start_time - std::chrono::steady_clock::now();
     auto[xBefore, yBefore] = std::make_tuple( 400., 300. );
 
-    //std::thread shaderFileChecker([&] {
-    //    auto start_time = std::chrono::steady_clock::now();
-    //    auto end_time = start_time + frame_duration(10);
-    //    auto lastWriteTime = [](std::experimental::filesystem::path& p) {return std::experimental::filesystem::last_write_time(p); };
-    //    auto lastTimeModifiedV = lastWriteTime(vertexPath);
-    //    auto lastTimeModifiedF = lastWriteTime(fragmentPath);
-    //    while (!glfwWindowShouldClose(window)) {
-    //        start_time = std::chrono::steady_clock::now();
-    //        end_time = start_time + frame_duration(10);
-    //        if (lastTimeModifiedV != lastWriteTime(vertexPath) || lastTimeModifiedF != lastWriteTime(fragmentPath)) {
-    //            // reload shaders
-    //            Shader s(vertexPath, fragmentPath);
-    //            glOperationRunning.lock();
-    //            lightShader = s;
-    //            glOperationRunning.unlock();
-    //            lastTimeModifiedV = lastWriteTime(vertexPath);
-    //            lastTimeModifiedF = lastWriteTime(fragmentPath);
-    //        }
-    //        std::this_thread::sleep_until(end_time);
-    //    }
-    //});
-
     auto lastWriteTime = [](std::experimental::filesystem::path& p) {return std::experimental::filesystem::last_write_time(p); };
     auto lastTimeModifiedV = lastWriteTime(vertexPath);
     auto lastTimeModifiedF = lastWriteTime(fragmentPath);

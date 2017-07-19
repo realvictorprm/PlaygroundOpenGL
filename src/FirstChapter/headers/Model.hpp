@@ -397,7 +397,7 @@
 #include <map>
 #include <sstream>
 
-#include <glm.hpp>
+#include <glm/glm.hpp>
 #include "Shader.hpp"
 #include <stb_image.h>
 
