@@ -12,7 +12,7 @@
     
     <title>
         
-            Surface Nets | 
+            Naive Surface Nets | 
         
         Learn graphics programming
     </title>
@@ -67,18 +67,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://realvictorprm.github.io/PlaygroundOpenGL">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Surface Nets | Learn graphics programming">
+    <meta property="og:title" content="Naive Surface Nets | Learn graphics programming">
     <meta property="og:image" content="/PlaygroundOpenGL/img/favicon.png" />
     <meta property="og:description" content="">
     
 
     
         <meta property="article:published_time" content="Tue Jul 18 2017 16:37:24 GMT+0200" />
-        <meta property="article:modified_time" content="Tue Jul 18 2017 21:28:59 GMT+0200" />
+        <meta property="article:modified_time" content="Thu Jul 20 2017 21:48:03 GMT+0200" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Surface Nets | Learn graphics programming">
+    <meta name="twitter:title" content="Naive Surface Nets | Learn graphics programming">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="/PlaygroundOpenGL/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -112,10 +112,10 @@
         },
         "description": "Hi, nice to meet you"
     },
-    "headline": "Surface Nets",
+    "headline": "Naive Surface Nets",
     "url": "https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/18/Surface-Nets/index.html",
     "datePublished": "Tue Jul 18 2017 16:37:24 GMT+0200",
-    "dateModified": "Tue Jul 18 2017 21:28:59 GMT+0200",
+    "dateModified": "Thu Jul 20 2017 21:48:03 GMT+0200",
     "description": "",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -339,7 +339,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Isosurface-extraction"><span class="post-toc-number">1.</span> <span class="post-toc-text">Isosurface extraction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#How-do-surface-nets-work"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">How do surface nets work?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">Problem:</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#How-does-the-precalculation-of-the-edge-tables-work"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">How does the precalculation of the edge tables work?</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Isosurface-extraction"><span class="post-toc-number">1.</span> <span class="post-toc-text">Isosurface extraction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#How-do-naive-surface-nets-work"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">How do naive surface nets work?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Problem"><span class="post-toc-number">1.0.1.1.</span> <span class="post-toc-text">Problem:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Idea"><span class="post-toc-number">1.0.1.2.</span> <span class="post-toc-text">Idea:</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vertex-and-edge-intersection-lookup-table"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Vertex and edge intersection lookup table</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vertex-and-edge-index-order"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Vertex and edge index order</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Special-interpolation-algorithm"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Special interpolation algorithm</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Summary"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Summary</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Sources"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Sources</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Code"><span class="post-toc-number">1.4.0.1.</span> <span class="post-toc-text">Code</span></a></li></ol></li></ol></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -377,7 +377,7 @@
         
     
             <p class="article-headline-p">
-                Surface Nets
+                Naive Surface Nets
             </p>
         </div>
 
@@ -439,7 +439,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Surface Nets&url=https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/18/Surface-Nets/index.html&via=Victor Peter Rouven Müller" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Naive Surface Nets&url=https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/2017/07/18/Surface-Nets/index.html&via=Victor Peter Rouven Müller" target="_blank">
             <li class="mdl-menu__item">
                 Share to Twitter
             </li>
@@ -469,14 +469,33 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Isosurface-extraction"><a href="#Isosurface-extraction" class="headerlink" title="Isosurface extraction"></a>Isosurface extraction</h1><h2 id="How-do-surface-nets-work"><a href="#How-do-surface-nets-work" class="headerlink" title="How do surface nets work?"></a>How do surface nets work?</h2><p>Let’s start with giving this code, I’ll explain as much as possible.</p>
+        <h1 id="Isosurface-extraction"><a href="#Isosurface-extraction" class="headerlink" title="Isosurface extraction"></a>Isosurface extraction</h1><h3 id="How-do-naive-surface-nets-work"><a href="#How-do-naive-surface-nets-work" class="headerlink" title="How do naive surface nets work?"></a>How do naive surface nets work?</h3><p>Let’s start with giving this code, I’ll explain as much as possible.</p>
 <h4 id="Problem"><a href="#Problem" class="headerlink" title="Problem:"></a>Problem:</h4><p>We want a easy algorithm for iso surface extraction that people can understand. </p>
 <p>Solution is surface nets!</p>
-<script src="https://gist.github.com/realvictorprm/06bbce3c9935a1d148562ec01990216c.js"></script>
+<h4 id="Idea"><a href="#Idea" class="headerlink" title="Idea:"></a>Idea:</h4><p>Approach is following, consider an amount of 3D voxel data. Just like in Marching cubes we start iterating over this data in a grid system.<br>The iteration always takes a look on 8 voxels respectively a 3D cube. To extract a surface out from this data we asume that each block (with edge intersections) returns a single vertex. Each vertex from a cube is linked to the next block so in the end we have only <em>quads</em> which can be easily drawn. Furthermore we also assume that the block vertex is most likely to be in the middle of the cube (so x = 0.5, y = 0.5 and z = 0.5 considering normalized values). This system already gives us a valid algorithm for extracting a surface out of 3D voxel data, see image below.</p>
+<img src="/PlaygroundOpenGL/2017/07/18/Surface-Nets/Torus.png" alt="[Block Torus]" title="[Block Torus]">
+<p>However if we want special interpolation the situation get’s a bit more complicated.</p>
+<p>Main idea here is just to interpolate between each intersection edge, e.g. between vertex a and vertex b where each has a specific scalar value.</p>
+<p>To understand the interpolation algorithm used here we first need to cover something else too.</p>
+<h2 id="Vertex-and-edge-intersection-lookup-table"><a href="#Vertex-and-edge-intersection-lookup-table" class="headerlink" title="Vertex and edge intersection lookup table"></a>Vertex and edge intersection lookup table</h2><p>The edge intersection detection, interpolation and face generation relies upon a lookup table for speedup.<br>In the implementation there are provided two lookup tables each relying on a specific order of the vertex and edge indicies (for the cube).<br>The first one maps an edge index to the correct vertex pair, the second table matches the vertex mask to the edge intersection mask.<br>Vertex mask means here which vertices are not in the surface (their bits are not set).</p>
+<h2 id="Vertex-and-edge-index-order"><a href="#Vertex-and-edge-index-order" class="headerlink" title="Vertex and edge index order"></a>Vertex and edge index order</h2><p>The calculation of the edge table only works if we define a specific number order for our vertices.<br>The underlying picture shows the defined vertex number order for our implementation.</p>
+<img src="/PlaygroundOpenGL/2017/07/18/Surface-Nets/IndexOrder.jpg" alt="[Index order vertices]" title="[Index order vertices]">
+<p>The edges have a specific order too which is respectively in the implementation. The picture below shows the edge number order.</p>
+<img src="/PlaygroundOpenGL/2017/07/18/Surface-Nets/IndexOrderEdges.jpg" alt="[Index order edges]" title="[Index order edges]">
+<h3 id="Special-interpolation-algorithm"><a href="#Special-interpolation-algorithm" class="headerlink" title="Special interpolation algorithm"></a>Special interpolation algorithm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">// Fast interpolation algorithm, multiplication is done in the end</div><div class="line">let interpolateVertices () =</div><div class="line">    let rec iterate i e_count (vertices:float[]) =</div><div class="line">        if i &lt; 12 then</div><div class="line">            if hasFlag PowerOfTwo.[i] edge_mask then</div><div class="line">                let e0, e1 = cubeEdgesSurfacenets.[i]</div><div class="line">                let g0, g1 = block.[e0], block.[e1]</div><div class="line">                let diff = g0 - g1</div><div class="line">                // Here we can specify whether an interpolation should be discarded if the values are too near</div><div class="line">                if abs diff &gt; 1e-6 then </div><div class="line">                    let t = g0 / diff</div><div class="line">                    let res = </div><div class="line">                        [|  for j in 0..2 do</div><div class="line">                                let k = PowerOfTwo.[j]</div><div class="line">                                let a = hasFlag k e0 //(e0 &amp;&amp;&amp; k)</div><div class="line">                                let b = hasFlag k e1 //(e1 &amp;&amp;&amp; k)</div><div class="line">                                let res = </div><div class="line">                                    if (a &lt;&gt; b) then </div><div class="line">                                        t</div><div class="line">                                    elif a then</div><div class="line">                                        1.</div><div class="line">                                    else</div><div class="line">                                        0.0</div><div class="line">                                yield vertices.[j] + res |]</div><div class="line">                    iterate (i + 1) (e_count + 1) res</div><div class="line">                else</div><div class="line">                    iterate (i + 1) (e_count + 1) vertices</div><div class="line">            else</div><div class="line">                iterate (i + 1) e_count vertices</div><div class="line">        else</div><div class="line">            vertices, e_count</div><div class="line">    let vertices, e_count = iterate 0 0 [| 0.0; 0.0; 0.0 |]</div><div class="line">    let s = 1.0 / float e_count</div><div class="line"></div><div class="line">    // finally normalize the values again and afterwards translate them centric to the grid.</div><div class="line">    float z1 + s * vertices.[0] - zMaxHalf,</div><div class="line">    float y1 + s * vertices.[1] - yMaxHalf,</div><div class="line">    float x1 + s * vertices.[2] - xMaxHalf</div></pre></td></tr></table></figure>
+<p>Let’s take a look into the interpolation algorithm provided here. Because it isn’t straightforward, I’ll try to explain here what’s happening.</p>
+<p>With naive surface nets we assume that the vertex is in the middle, due to this we have special conditions.<br>The workflow is following:</p>
+<ul>
+<li>The vertex values are initial zero</li>
+<li>We apply all interpolation first and normalize the new values last.</li>
+<li>We use the edge intersection mask to get the specific vertex indicies to those</li>
+<li>The vertex indicies are distributed special and so we can do following:<br>– We shift 1.0 in x direction if both indicies first bit is set.<br>  So all edges towards infinite positive x.<br>  or in short - it’s either edge 3, 10, 7 or 4 -<br>– We shift 1.0 in y direction if both indicies second bit is set.<br>  So all edges towards infinite positive y.<br>  or in short - it’s either edge 5, 6, 7 or 11 -<br>– We shift 1.0 in z direction if both indicies third bit is set.<br>  So all edges towards infinite positive z.<br>– We do not shift in x direction if both indices first bit is <em>not</em> set<br>  So all edges towards infinite negative x direction.<br>– We do not shift in y direction if both indices second bit is <em>not</em> set<br>  So all edges towards infinite negative y direction.<br>– We do not shift in z direction if both indices third bit is <em>not</em> set<br>  So all edges towards infinite negative z direction.<br>– We shift up with the interpolated value if the indicies are in axis direction (e.g. x or y or z)<br>  Just all edges which are parallel to the axis direction.<br>=&gt; In short, the bitmasking operations allows here fast applying the interpolation correctly.</li>
+<li>Lastly we normalize the result values (using the edge intersection counter) and translate the values so the resulting mesh is centered around the middle of the grid (e.g. zero)</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Of course it’s possible to provide a different solution for the interpolation algorithm due to it’s worse readability.<br>However the lookup tables are something which should be used <em>AS IS</em> because they are very difficult to construct.<br>If you need a working implementation feel free to use the one provided below (written in F#).</p>
+<h2 id="Sources"><a href="#Sources" class="headerlink" title="Sources"></a>Sources</h2><p>Sure, I used some sources too, the algorithm below is a translation from JS to F#.<br>The JS code is comming from <a href="https://0fps.net/2012/07/12/smooth-voxel-terrain-part-2/" target="_blank" rel="external">this</a> awesome blog. I really recommend to read this one too especially because it provides a working JS example!</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><script src="https://gist.github.com/realvictorprm/06bbce3c9935a1d148562ec01990216c.js"></script>
 
-<p>Approach is following, consider an amount of 2D voxel data.</p>
-<p>Surface nets simply tell that the point is in t</p>
-<h2 id="How-does-the-precalculation-of-the-edge-tables-work"><a href="#How-does-the-precalculation-of-the-edge-tables-work" class="headerlink" title="How does the precalculation of the edge tables work?"></a>How does the precalculation of the edge tables work?</h2><img src="/PlaygroundOpenGL/2017/07/18/Surface-Nets/polygonise1.gif" alt="[Cube properties]" title="[Cube properties]">
     
 
     
