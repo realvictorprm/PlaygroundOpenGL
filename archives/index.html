@@ -1,890 +1,662 @@
+
 <!DOCTYPE html>
-<html style="display: none;" lang="en">
-    <head>
-    <meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.4.0 -->
-    <script>window.materialVersion = "1.4.0"</script>
-
-    <!-- Title -->
+<html lang="en">
     
-    <title>
-        
-            Archives | 
-        
-        Learn graphics programming
-    </title>
-
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    
-    
-    
-    
-    
-        <link rel="dns-prefetch" href="https://www.google-analytics.com"/>
-    
-    
-    
-    
-    
-    
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="theme-color" content="#0097A7">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Learn graphics programming">
+    <title>Archives - Learn graphics programming</title>
     <meta name="author" content="Victor Peter Rouven Müller">
-    <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="null">
-
-    <!-- Site Verification -->
     
     
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/PlaygroundOpenGL/img/favicon.png">
-    <link rel="icon" sizes="192x192" href="/PlaygroundOpenGL/img/favicon.png">
-    <link rel="apple-touch-icon" href="/PlaygroundOpenGL/img/favicon.png">
-
-    <!--iOS -->
-    <meta name="apple-mobile-web-app-title" content="Title">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="480">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Learn graphics programming">
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://realvictorprm.github.io/PlaygroundOpenGL">
+    
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archives | Learn graphics programming">
-    <meta property="og:image" content="/PlaygroundOpenGL/img/favicon.png" />
-    <meta property="og:description" content="">
+<meta property="og:title" content="Learn graphics programming">
+<meta property="og:url" content="https://realvictorprm.github.io/PlaygroundOpenGL/archives/index.html">
+<meta property="og:site_name" content="Learn graphics programming">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Learn graphics programming">
+<meta name="twitter:creator" content="@realvictorprm">
     
-
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Archives | Learn graphics programming">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="/PlaygroundOpenGL/img/favicon.png">
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://realvictorprm.github.io/PlaygroundOpenGL" />
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="https://realvictorprm.github.io/PlaygroundOpenGL/PlaygroundOpenGL/archives/index.html" />
-    
-
-    <!-- Structured-data for SEO -->
     
         
-
-
-
-    
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.en.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
-
-    <!-- Import CSS & jQuery -->
-    
-        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/PlaygroundOpenGL/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
-        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/PlaygroundOpenGL/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
-        
-        
-            <style>
-    
-    
-    .footer-sns-twitter {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHptNTMyLjggMjA1YzEwIDQgMjMgMTAuOCAyOC44IDE1LjIgMTIuNiA5LjIgMTYuNiAxMC42IDI5LjQgOS40IDYuNi0uNiAxMy0zLjIgMjAuNC04LjIgMTEuMi03LjYgMTkuNC05LjIgMjMuNi01IDMuNiAzLjYgMi44IDktMi44IDE4LjYtNy4yIDEyLjQtNiAxOC44IDQuMiAyNC4yIDQuNCAyLjIgOC4yIDUuNiA4LjYgNy40IDEgNC44LTEyLjYgMjQuMi0yMiAzMS44LTExLjggOS4yLTE3LjIgMjIuNi0xOS42IDQ3LjgtNC44IDUwLjQtNy44IDY2LjYtMTYuNCA4NS40LTMgNy03IDE3LjgtOC44IDI0LTEuOCA2LjQtNSAxNC42LTcuNCAxOC40LTIuMiAzLjgtNy40IDEzLTExLjQgMjAuNC0xNy4yIDMwLjgtNDMuNCA2MS40LTcxLjQgODMuOC0yNS42IDIwLjQtNDYgMzMuMi02NC4yIDQwLjItOC40IDMuMi0xOCA3LjYtMjEuNCA5LjYtNy40IDQuNi0yMi40IDguNi01Ny4yIDE1LTYyLjIgMTEuNi03OS4yIDExLjQtMTM1LjYtMS0zMi40LTctMzguNi05LTUyLTE2LjgtMjEuNC0xMi42LTI0LjItMTQuOC0yNC4yLTE5LjQgMC02LjIgMTAuMi05LjIgMzUtMTAuNCAyMi40LTEgMjguNi0yLjYgNTctMTQuMiAyMy44LTkuOCAyOS40LTEyLjggMzAuNC0xNi44IDIuMi04LjItMy0xMy4yLTI2LjgtMjUuNC0yNS44LTEzLjItMzIuMi0xOC40LTQzLjgtMzUuOC05LTEzLjYtMTAtMjEuMi0zLjYtMzMuNiA1LjQtMTAuOCAzLjYtMTUtMTEuOC0yNS40LTktNi0xNC0xMS42LTIwLjgtMjIuNi0yMy40LTM3LjgtMjUtNTAuOC03LjItNTkuOCA0LjgtMi40IDkuNC01LjQgMTAuMi02LjYgMi44LTQuMi0uNC0xNS42LTguNC0yOS0xMS42LTE5LjYtMTMuMi0yNS44LTEzLjItNTUuMiAwLTI4LjggMi42LTM3LjggMTItNDAuMiA5LTIuMiAxNC44IDEgMzUuNiAyMC4yIDI0LjggMjIuOCA0My42IDM2LjYgNjIuOCA0NS44IDggMy44IDE3LjggOS4yIDIyIDEyIDQuMiAyLjggMTQuOCA3IDIzLjQgOS4yIDguNiAyLjIgMjQuMiA2LjggMzQuOCAxMC4yIDEzLjQgNC40IDIzLjYgNi40IDMzIDYuNiAxMi44LjIgMTQuMi0uMiAxOC42LTUuNCA0LTQuOCA0LjgtNy44IDQuOC0xOS4yIDAtMTQuNCA1LjYtMzkuNiAxMS4yLTUwLjYgNC4yLTguNCAyOS4yLTM0LjIgMzkuOC00MS40IDcuOC01LjQgMzUuNi0xNiA1Mi0yMCAxNC4yLTMuNiAzMi42LTEuMiA1Mi40IDYuOHoiLz48L3N2Zz4=);
-    }
     
     
     
     
     
+    <!--STYLES-->
+    <link rel="stylesheet" href="/PlaygroundOpenGL/assets/css/style-sxklfps8ywgfyyjcowvnb4gxdgt0zjts3hsguljmv9uqanxjbnitrovtbrek.min.css">
+    <!--STYLES END-->
     
-    .footer-sns-github {
-        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
-    }
-    
-    
-    
-    
-    
-</style>
-
-        
-        <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-  }
-
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
-      }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-
-
-        <script>lsloader.load("js/jquery.min.js","/PlaygroundOpenGL/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==")</script>
-    
-    
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Analytics -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'null', 'auto');ga('send', 'pageview');
-</script>
-
-    <!-- Custom Head -->
     
 </head>
 
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
 
     
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
 
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
+<header id="header" data-behavior="1">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/PlaygroundOpenGL/ ">Learn graphics programming</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+        </a>
+    
+</header>
 
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
+            <!-- Define author's picture -->
 
+
+<nav id="sidebar" data-behavior="1">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
                     
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span class="MD-burger-layer"></span>
-                        </button>
+                        <a  class="sidebar-button-link "
+                             href="/PlaygroundOpenGL/ "
+                            
+                        >
                     
-
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
-
-    <!-- Pin on top -->
-    
-
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/PlaygroundOpenGL/2017/07/18/Surface-Nets/">Naive Surface Nets</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/PlaygroundOpenGL/2017/07/18/Surface-Nets/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://avatars0.githubusercontent.com/u/25414896?v=4&amp;s=460" width="44px" height="44px" alt="Victor Peter Rouven Müller's avatar">
-            </div>
-            <div>
-                <strong>Victor Peter Rouven Müller</strong>
-                <span>Jul 18, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/PlaygroundOpenGL/2017/07/17/Build-tools/">Build tool change</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/PlaygroundOpenGL/2017/07/17/Build-tools/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://avatars0.githubusercontent.com/u/25414896?v=4&amp;s=460" width="44px" height="44px" alt="Victor Peter Rouven Müller's avatar">
-            </div>
-            <div>
-                <strong>Victor Peter Rouven Müller</strong>
-                <span>Jul 17, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/PlaygroundOpenGL/2017/07/17/First-showcase/">First showcase</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            With this repo here I finally started getting deeper into graphics program...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/PlaygroundOpenGL/2017/07/17/First-showcase/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://avatars0.githubusercontent.com/u/25414896?v=4&amp;s=460" width="44px" height="44px" alt="Victor Peter Rouven Müller's avatar">
-            </div>
-            <div>
-                <strong>Victor Peter Rouven Müller</strong>
-                <span>Jul 17, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/PlaygroundOpenGL/2017/07/17/First-post/">First post</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Hello fellow devs out there, this is my first blog post for the learn grap...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/PlaygroundOpenGL/2017/07/17/First-post/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="https://avatars0.githubusercontent.com/u/25414896?v=4&amp;s=460" width="44px" height="44px" alt="Victor Peter Rouven Müller's avatar">
-            </div>
-            <div>
-                <strong>Victor Peter Rouven Müller</strong>
-                <span>Jul 17, 2017</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/PlaygroundOpenGL/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
-</script>
-
-    
-</div>
-
-
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/PlaygroundOpenGL/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="https://avatars0.githubusercontent.com/u/25414896?v=4&amp;s=460" alt="Victor Peter Rouven Müller's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        mueller.vpr@gmail.com
-        <b class="caret"></b>
-    </a>
-</div>
-
-
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="#" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
+                        <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                        <span class="sidebar-button-desc">Home</span>
                     </a>
-                </li>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/PlaygroundOpenGL/all-categories"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/PlaygroundOpenGL/all-archives"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="#about"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
             
         </ul>
-    </li>
-
-    <!-- Homepage -->
-    
-        <li id="sidebar-first-li">
-            <a href="/PlaygroundOpenGL/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                Home
-            </a>
-        </li>
         
-    
-
-    <!-- Archives  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    Archives
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/PlaygroundOpenGL/archives/2017/07/">July 2017<span class="sidebar_archives-count">4</span></a>
-            </ul>
-        </li>
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/realvictorprm" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/realvictorprm" target="_blank" rel="noopener">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+        </ul>
         
-    
-
-    <!-- Categories  -->
-    
-
-    <!-- Pages  -->
-    
-        <li>
-            <a href="about" title="About">
-                
-                    <i class="material-icons sidebar-material-icons">https://avatars0.githubusercontent.com/u/25414896?v=4&amp;s=460</i>
-                
-                About
-            </a>
-        </li>
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/PlaygroundOpenGL/atom.xml"
+                            
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
         
-    
-
-    <!-- Article Number  -->
-    
-</ul>
-
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-    <div class="sidebar-divider"></div>
-
-
-<!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            Theme - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
     </div>
+</nav>
 
-    <!-- Sidebar Image -->
+            
+            <div id="main" data-behavior="1"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    <section class="postShorten-group main-content-wrap">
     
-
-</aside>
-
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
                     
-
+                        <a class="link-unstyled" href="/PlaygroundOpenGL/2017/07/18/Surface-Nets/">
+                            Naive Surface Nets
+                        </a>
                     
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-        <a href="https://twitter.com/realvictorprm" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
-                <span class="visuallyhidden">Twitter</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Facebook -->
-    
-
-    <!-- Google + -->
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-        <a href="https://github.com/realvictorprm" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
-                <span class="visuallyhidden">Github</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-
-    <!-- Bilibili -->
-    
-
-    <!-- Telegram -->
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-07-18T16:37:24+02:00">
+	
+		    Jul 18, 2017
+    	
+    </time>
     
 </div>
 
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©&nbsp;2017&nbsp;-<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Learn graphics programming
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
             </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h1 id="Isosurface-extraction"><a href="#Isosurface-extraction" class="headerlink" title="Isosurface extraction"></a>Isosurface extraction</h1><h3 id="1-How-do-naive-surface-nets-work"><a href="#1-How-do-naive-surface-nets-work" class="headerlink" title="1. How do naive surface nets work?"></a>1. How do naive surface nets work?</h3><h4 id="Problem"><a href="#Problem" class="headerlink" title="Problem:"></a>Problem:</h4><p>We want a easy algorithm for iso surface extraction that people can understand. </p>
+<p>Solution is surface nets!</p>
+<h4 id="Idea"><a href="#Idea" class="headerlink" title="Idea: "></a>Idea: <p align="justify"></p></h4><p>Approach is following, consider an amount of 3D voxel data. Just like in the famous Marching Cubes algorithm we’re going to iterate blockwise over our voxel data (results in a 3D grid system).<br>Each block consists of 8 voxels - a 3D cube. To extract a surface out from this data we asume that each block (with edge intersections) returns a single vertex. Each vertex from a cube is linked to the next block so in the end we have only <em>quads</em> which can be easily drawn. Furthermore we also assume that the block vertex is most likely to be in the middle of the cube (so x = 0.5, y = 0.5 and z = 0.5 considering normalized values). This system already gives us a valid algorithm for extracting a surface out of 3D voxel data, see image below.<br></p><p></p>
+<img src="/PlaygroundOpenGL/2017/07/18/Surface-Nets/NonInterpolatedPlayingWithShaders.PNG" alt="[Block Torus]" title="[Block Torus]">
+<p align="justify"><br>However if we want special interpolation the situation get’s a bit more complicated.<br><br>Main idea here is just to interpolate between each intersection edge, e.g. between vertex a and vertex b where each has a specific scalar value.<br><br>To understand the interpolation algorithm used here we first need to cover something else too.<br></p>
+
+<h2 id="2-The-Vertex-and-edge-intersection-lookup-table"><a href="#2-The-Vertex-and-edge-intersection-lookup-table" class="headerlink" title="2. The Vertex and edge intersection lookup table "></a>2. The Vertex and edge intersection lookup table <p align="justify"></p></h2><p>The edge intersection detection, interpolation and face generation relies upon a lookup table for speedup. In the implementation there are provided two lookup tables each relying on a specific order of the vertex and edge indicies (for the cube). The first one maps an edge index to the correct vertex pair, the second table matches the vertex mask to the edge intersection mask.<br>Vertex mask means here which vertices are not in the surface (their bits are not set).<br></p><p></p>
+<h2 id="3-The-Vertex-and-edge-index-order"><a href="#3-The-Vertex-and-edge-index-order" class="headerlink" title="3. The Vertex and edge index order "></a>3. The Vertex and edge index order <p align="justify"></p></h2><p>The calculation of the edge table only works if we define a specific number order for our vertices.<br>The underlying picture shows the defined vertex number order for our implementation.<br></p><p></p>
+<img src="/PlaygroundOpenGL/2017/07/18/Surface-Nets/CubeIndexOrder.png" alt="[Index order vertices]" title="[Index order vertices]">
+<h3 id="3-1-Explaining-the-Vertex-order"><a href="#3-1-Explaining-the-Vertex-order" class="headerlink" title="3.1 Explaining the Vertex order"></a>3.1 Explaining the Vertex order</h3><p>The order of those indices have a logical reason. Each axis correspondends to a single bit:</p>
+<ul>
+<li>first bit for x</li>
+<li>second bit for y</li>
+<li>third bit for z</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: This does work because we have a maximum of 8 edges in a cube which can be represented by log(8) / log(2) bits (which is 3)!</p>
+</blockquote>
+<p><br></p>
+<h3 id="3-2-Example"><a href="#3-2-Example" class="headerlink" title="3.2 Example"></a>3.2 Example</h3><p>Just to get conform with this unusual mapping of coordinates here an example:</p>
+<p><strong>Question</strong>:<br>Where is vertex <em>3</em> located?</p>
+<p><strong>Thoughts</strong>:<br>=&gt; To get the coordinates we have to look into it’s binary representation</p>
+<p><strong>Answer</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>z</th>
+<th>y</th>
+<th>x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>It’s telling us to move one towards us (x), then to move one left (y).<br>The height is zero (z).</p>
+<p>The edges have a specific order too which is respectively in the implementation. The picture below shows the edge number order.</p>
+<h2 id="4-The-optimized-interpolation"><a href="#4-The-optimized-interpolation" class="headerlink" title="4. The optimized interpolation"></a>4. The optimized interpolation</h2><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Fast interpolation algorithm, multiplication is done in the end</span></div><div class="line"><span class="keyword">let</span> interpolateVertices () =</div><div class="line">    <span class="keyword">let</span> <span class="keyword">rec</span> iterate i e_count (vertices:float[]) =</div><div class="line">        <span class="keyword">if</span> i &lt; <span class="number">12</span> <span class="keyword">then</span></div><div class="line">            <span class="keyword">if</span> hasFlag PowerOfTwo.[i] edge_mask <span class="keyword">then</span></div><div class="line">                <span class="keyword">let</span> e0, e1 = cubeEdgesSurfacenets.[i]</div><div class="line">                <span class="keyword">let</span> g0, g1 = block.[e0], block.[e1]</div><div class="line">                <span class="keyword">let</span> diff = g0 - g1</div><div class="line">                <span class="comment">// Here we can specify whether an interpolation should be discarded if the values are too near</span></div><div class="line">                <span class="keyword">if</span> abs diff &gt; <span class="number">1e-6</span> <span class="keyword">then</span> </div><div class="line">                    <span class="keyword">let</span> t = g0 / diff</div><div class="line">                    <span class="keyword">let</span> res = </div><div class="line">                        [|  <span class="keyword">for</span> j <span class="keyword">in</span> <span class="number">0.</span><span class="number">.2</span> <span class="keyword">do</span></div><div class="line">                                <span class="keyword">let</span> k = PowerOfTwo.[j]</div><div class="line">                                <span class="keyword">let</span> a = hasFlag k e0 <span class="comment">//(e0 &amp;&amp;&amp; k)</span></div><div class="line">                                <span class="keyword">let</span> b = hasFlag k e1 <span class="comment">//(e1 &amp;&amp;&amp; k)</span></div><div class="line">                                <span class="keyword">let</span> res = </div><div class="line">                                    <span class="keyword">if</span> (a &lt;&gt; b) <span class="keyword">then</span> </div><div class="line">                                        t</div><div class="line">                                    <span class="keyword">elif</span> a <span class="keyword">then</span></div><div class="line">                                        <span class="number">1.</span></div><div class="line">                                    <span class="keyword">else</span></div><div class="line">                                        <span class="number">0.0</span></div><div class="line">                                <span class="keyword">yield</span> vertices.[j] + res |]</div><div class="line">                    iterate (i + <span class="number">1</span>) (e_count + <span class="number">1</span>) res</div><div class="line">                <span class="keyword">else</span></div><div class="line">                    iterate (i + <span class="number">1</span>) (e_count + <span class="number">1</span>) vertices</div><div class="line">            <span class="keyword">else</span></div><div class="line">                iterate (i + <span class="number">1</span>) e_count vertices</div><div class="line">        <span class="keyword">else</span></div><div class="line">            vertices, e_count</div><div class="line">    <span class="keyword">let</span> vertices, e_count = iterate <span class="number">0</span> <span class="number">0</span> [| <span class="number">0.0</span>; <span class="number">0.0</span>; <span class="number">0.0</span> |]</div><div class="line">    <span class="keyword">let</span> s = <span class="number">1.0</span> / float e_count</div><div class="line"></div><div class="line">    <span class="comment">// finally normalize the values again and afterwards translate them centric to the grid.</span></div><div class="line">    float z1 + s * vertices.[<span class="number">0</span>] - zMaxHalf,</div><div class="line">    float y1 + s * vertices.[<span class="number">1</span>] - yMaxHalf,</div><div class="line">    float x1 + s * vertices.[<span class="number">2</span>] - xMaxHalf</div></pre></td></tr></table></figure>
+<p>Let’s take a look into the interpolation algorithm provided here. Because it isn’t straightforward, I’ll try to explain here what’s happening.</p>
+<p>With naive surface nets we assume that the vertex is in the middle, due to this we have special conditions.<br>The workflow is following:</p>
+<ul>
+<li>1th The vertex values are initial zero</li>
+<li>2th We apply all interpolation first and normalize the new values last.</li>
+<li>3th We use the edge intersection mask to get the specific vertex indicies to those</li>
+<li>4th The vertex indicies are distributed special and so we can do following:<br>– We shift 1.0 in x direction if both indicies first bit is set.<br>  So all edges towards infinite positive x.<br>  or in short - it’s either edge 3, 10, 7 or 4 -<br>– We shift 1.0 in y direction if both indicies second bit is set.<br>  So all edges towards infinite positive y.<br>  or in short - it’s either edge 5, 6, 7 or 11 -<br>– We shift 1.0 in z direction if both indicies third bit is set.<br>  So all edges towards infinite positive z.<br>– We do not shift in x direction if both indices first bit is <em>not</em> set<br>  So all edges towards infinite negative x direction.<br>– We do not shift in y direction if both indices second bit is <em>not</em> set<br>  So all edges towards infinite negative y direction.<br>– We do not shift in z direction if both indices third bit is <em>not</em> set<br>  So all edges towards infinite negative z direction.<br>– We shift up with the interpolated value if the indicies are in axis direction (e.g. x or y or z)<br>  Just all edges which are parallel to the axis direction.<br>=&gt; In short, the bitmasking operations allows here fast applying the interpolation correctly.</li>
+<li>Lastly we normalize the result values (using the edge intersection counter) and translate the values so the resulting mesh is centered around the middle of the grid (e.g. zero)</li>
+</ul>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Of course it’s possible to provide a different solution for the interpolation algorithm due to it’s worse readability.<br>However the lookup tables are something which should be used <em>AS IS</em> because they are very difficult to construct.<br>If you need a working implementation feel free to use the one provided below (written in F#).</p>
+<p>Results may look like this:</p>
+<img src="/PlaygroundOpenGL/2017/07/18/Surface-Nets/PlayingWithShaders.PNG" alt="[Block Torus]" title="[Block Torus]">
+<h2 id="Sources"><a href="#Sources" class="headerlink" title="Sources"></a>Sources</h2><p>Sure, I used some sources too, the algorithm below is a translation from JS to F#.<br>The JS code is comming from <a href="https://0fps.net/2012/07/12/smooth-voxel-terrain-part-2/" target="_blank" rel="external">this</a> awesome blog. I really recommend to read this one too especially because it provides a working JS example!</p>
+<h4 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h4><script src="https://gist.github.com/realvictorprm/06bbce3c9935a1d148562ec01990216c.js"></script>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/PlaygroundOpenGL/2017/07/18/Surface-Nets/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
         </div>
+        
+            <a href="/PlaygroundOpenGL/2017/07/18/Surface-Nets/">
+                <div class="postShorten-thumbnailimg">
+                    <img alt="" itemprop="image" src="https://www.opengl.org/img/opengl_logo.png"/>
+                </div>
+            </a>
+            
+        
+    </article>
     
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/PlaygroundOpenGL/2017/07/17/Build-tools/">
+                            Build tool change
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-07-17T21:30:27+02:00">
+	
+		    Jul 17, 2017
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h1 id="Short-look-into-common-C-build-tools"><a href="#Short-look-into-common-C-build-tools" class="headerlink" title="Short look into common C++ build tools"></a>Short look into common C++ build tools</h1><p>Build tools for C++ are still these days a difficult topic. To know them is very important because often you want to run conform with the rest of the world. </p>
+<h2 id="CMAKE"><a href="#CMAKE" class="headerlink" title=" CMAKE"></a><img src="https://cmake.org/wp-content/uploads/2014/06/slider-cmake.png" height="50"> <a href="https://cmake.org" target="_blank" rel="external">CMAKE</a></h2><p align="justify"><br>These days mostly used build tool is definitely <em>CMAKE</em>. Heavy usage is seen e.g. with Qt and other big libraries.<br>CMAKE in detail consists mainly of a single file called <em>CMakeLists.txt</em> (sometimes some helper script files are added for seperation).<br>This file describes the library requirements, header requirements, include folders etc. However it’s only used to generate the final build script files like <em>GNU Makefiles</em> or <em>Visual Studio solution files</em> through inputing it into the cmake command line tool. In short, sounds like a good tool <em>but</em> the language used to write those description files (cmakelist.txt) is a <em>weird variation of bash</em>. Definitely it isn’t that comfortable to work with and so some people still prefer other build tools. Last note, using CMAKE requires that the client has CMAKE installed.<br></p>
+
+<h2 id="Premake"><a href="#Premake" class="headerlink" title=" Premake"></a><img src="https://premake.github.io/premake-logo.png" height="50"> <a href="https://premake.github.io" target="_blank" rel="external">Premake</a></h2><p align="justify"><br>Another widely used tool is <em>premake</em>. Used by big game companies like <em>Blizzard</em> it’s definitely a tool to go. In general premake works the same like CMAKE however instead of using a weird variation of bash or other weird and uncomfortable languages it just makes usage of <em>Lua</em>. And so the build files are often very easy to write for normal developers because Lua is a widely know language without special knowledge requirements. Easy, simple, nice! Of course <em>premake</em> has some special functions and writings but it’s also very easy to understand. Nevertheless, best thing about <em>premake</em> is that it’s a lot easier to read compared to <em>CMAKE</em>. Unfortunately there are some reasons why <em>premake</em> isn’t as much used as <em>CMAKE</em>. One of those reasons is the lack of functionality e.g. passing special build command flags for the C++ compiler. Last note, using Premake requires the client <em>not</em> to have it installed. It’s often <em>shipped with the repository</em> as you may have noticed with mine.<br></p>
+
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>Due to the lack of selecting special C++ language version with Premake I’m pushed to switch the repositories build system to CMAKE. Unfortunately I’m using C++17 features which need special build flags. It’s really a bummer, <em>Premake</em> isn’t capable of this yet.. <em>yet</em> my friends!</p>
+<p>Now let’s work on switching the build system!</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/PlaygroundOpenGL/2017/07/17/Build-tools/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+            <a href="/PlaygroundOpenGL/2017/07/17/Build-tools/">
+                <div class="postShorten-thumbnailimg">
+                    <img alt="" itemprop="image" src="https://www.opengl.org/img/opengl_logo.png"/>
+                </div>
+            </a>
+            
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/PlaygroundOpenGL/2017/07/17/First-showcase/">
+                            First showcase
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-07-17T17:33:21+02:00">
+	
+		    Jul 17, 2017
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>With this repo here I finally started getting deeper into graphics programming and so I already can show some results.</p>
+<p>To get into OpenGL I’ve used the incredible good tutorials found <a href="https://learnopengl.com" target="_blank" rel="external">here</a>.</p>
+<h2 id="1-Basic-lighting-materials"><a href="#1-Basic-lighting-materials" class="headerlink" title="1. Basic lighting, materials"></a>1. Basic lighting, materials</h2><p>I’ve made my way through those basic parts and produced nice colored cubes.<br>During my experiments with the lighting I ran into some minor bugs in the specular shading</p>
+<img src="/PlaygroundOpenGL/2017/07/17/First-showcase/Fail.gif" alt="[inverted_specular_shading]" title="[inverted_specular_shading]">
+<p>Reason for this was, that my material data wasn’t multiplied as stated at this <a href="http://devernay.free.fr/cours/opengl/materials.html" target="_blank" rel="external">site</a> (where I’ve picked the data).<br>This resulted in inverted specular shading due to that my numbers were instead of above <em>1.0</em> under <em>1.0</em>.</p>
+<p>After fixing this bug I went over to the next exciting topics. </p>
+<h2 id="2-Loading-models"><a href="#2-Loading-models" class="headerlink" title="2. Loading models"></a>2. Loading models</h2><p>I guess this is one of the most important milestones in self-study sessions about graphics programming.<br>However it’s also one of the most annoying topics because there are plenty of 3d model formats. Thankfully there is a library called (assimp)[] which abstracts this for us.</p>
+<p>The tutorial provided nice loading code (well compatible with the generated data structures during our sessions) which I instantly adopted because I’m lazy.<br>Nevertheless I was active enough to give the code a more functional style ignoring the object style.</p>
+<p>Moreover it worked without big problems so I loaded in the example model from the tutorial. Instead of the popular teapot or monkeys or whateverelse-is-popular-out-there we loaded in a model from the more or less popular game crisis. </p>
+<img src="/PlaygroundOpenGL/2017/07/17/First-showcase/crisis_model.png" alt="[crisis_model]" title="[crisis_model]">
+<p>This is from a few days ago and you see that the lighting is pretty fine. Could be better yeah.</p>
+<p>What’s next? More interesting topics like skyboxes!</p>
+<h2 id="3-Skyboxes-environment-mapping-dynamics"><a href="#3-Skyboxes-environment-mapping-dynamics" class="headerlink" title="3. Skyboxes, environment mapping, dynamics"></a>3. Skyboxes, environment mapping, dynamics</h2><p>After nice model loading I went back to my nice cube starting to implement some skybox support. Of course the tutorial helped here again, telling us what is needed.<br>We had a lesson about cubemaps and simple reflection mathematics (which weren’t that unfamiliar to me) which resulted finally in this.</p>
+<img src="/PlaygroundOpenGL/2017/07/17/First-showcase/first_skybox_rendering.png" alt="[first_skybox_rendering]" title="[first_skybox_rendering]">
+<p>This time we see a nice cup (unfortunately without any coffee!) which was made by a friend of mine, Benjamin.<br>The cup doesn’t reflect anything yet but this was just a proove of concept (both for the skybox and the model loading code).</p>
+<h3 id="4-Static-and-dynamic-environment-mapping"><a href="#4-Static-and-dynamic-environment-mapping" class="headerlink" title="4. Static and dynamic environment mapping"></a>4. Static and dynamic environment mapping</h3><p>After I noticed it works, I went over to add some reflection mechanics to the fragment shader.<br>The algorithm here used was static environment mapping. It just uses a cubemap (here the skybox) to get data about the environment. The results are some static reflections. </p>
+<p>Unfortunately I didn’t grabbed any picture of this one. Sorry :-(<br>However more interesting were the dynamic reflections which I added afterwards without further tutorial help. The algorithm there is called dynamic environment mapping.</p>
+<p>It wasn’t that difficult to achieve dynamic environment mapping. It works in general like this (with some important notes from me):</p>
+<ol>
+<li>Render the scene offscreen to a cubemap, keep in mind to use here the skybox as initial cubemap.</li>
+</ol>
+<ul>
+<li>Use a 90° projection matrix, the resulting images must create a cube.</li>
+<li>Keep in mind that cube map images must have the <em>same width and height</em>!</li>
+<li>You need to render the scene 6-times, each time looking into a different direction! (front, back, left, right, top, bottom)</li>
+<li>Only the position of the camera is needed, you can safely ignore the rotation. Of course this only applies if you’re calculating the reflection vectors without respecting camera rotation (which you normaly do to reduce any confusion, we want to stay always in the same virtual system).</li>
+</ul>
+<ol>
+<li>Render the scene a second time but use the resulting cubemap from the first rendering.</li>
+</ol>
+<ul>
+<li>If you’re using OpenGL don’t forget to reset the framebuffer index so you’re rendering to the real screen and not <em>off-screen</em>! </li>
+</ul>
+<ol>
+<li>Enjoy the results (if you rendered correctly to the cubemap).</li>
+</ol>
+<ul>
+<li>No popcorn yet!</li>
+</ul>
+<img src="/PlaygroundOpenGL/2017/07/17/First-showcase/ReflectionTest3.gif" alt="[ReflectionTest3]" title="[ReflectionTest3]">
+<p>You can see that the reflections work quite nicely.</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/PlaygroundOpenGL/2017/07/17/First-showcase/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+            <a href="/PlaygroundOpenGL/2017/07/17/First-showcase/">
+                <div class="postShorten-thumbnailimg">
+                    <img alt="" itemprop="image" src="https://www.opengl.org/img/opengl_logo.png"/>
+                </div>
+            </a>
+            
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/PlaygroundOpenGL/2017/07/17/First-post/">
+                            First post
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-07-17T17:18:37+02:00">
+	
+		    Jul 17, 2017
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>Hello fellow devs out there, this is my first blog post for the learn graphics programming repository.<br>I’ll track here my progress, what I’m doing, maybe some tutorials too on how to do this and that, stay tuned!</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/PlaygroundOpenGL/2017/07/17/First-post/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+            <a href="/PlaygroundOpenGL/2017/07/17/First-post/">
+                <div class="postShorten-thumbnailimg">
+                    <img alt="" itemprop="image" src="https://www.opengl.org/img/opengl_logo.png"/>
+                </div>
+            </a>
+            
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-number">page 1 of 1</li>
+    </ul>
+</div>
+
+</section>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2017 Victor Peter Rouven Müller. All Rights Reserved.
+    </span>
 </footer>
 
-
-                    <!-- Import File -->
-
-
-    <script>lsloader.load("js/lazyload.min.js","/PlaygroundOpenGL/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==")</script>
-    <script>lsloader.load("js/js.min.js","/PlaygroundOpenGL/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
-
-
-
-    <script>lsloader.load("js/nprogress.js","/PlaygroundOpenGL/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
-
-
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('<link rel="stylesheet" href="/PlaygroundOpenGL/css/uc.css">');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
-
-<!-- Window Load-->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
-</script>
-
-<!-- MathJax Load-->
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Bing Background -->
-
-
-<script>
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
-        }
-    })()
-console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
-
-                </main>
             </div>
-        </body>
-    
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <h4 id="about-card-name">Victor Peter Rouven Müller</h4>
+        
+            <div id="about-card-bio"><p>Just a guy.</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Mainly Student but also Open Source Developer</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">no post found</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/First-post/">
+                            <img class="media-image" src="https://www.opengl.org/img/opengl_logo.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/First-post/">
+                            <h3 class="media-heading">First post</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 17, 2017
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/First-showcase/">
+                            <img class="media-image" src="https://www.opengl.org/img/opengl_logo.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/First-showcase/">
+                            <h3 class="media-heading">First showcase</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 17, 2017
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
+                            <img class="media-image" src="https://www.opengl.org/img/opengl_logo.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
+                            <h3 class="media-heading">Build tool change</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 17, 2017
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a class="link-unstyled" href="https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/18/Surface-Nets/">
+                            <img class="media-image" src="https://www.opengl.org/img/opengl_logo.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/18/Surface-Nets/">
+                            <h3 class="media-heading">Naive Surface Nets</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Jul 18, 2017
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="no post found"
+                data-message-one="1 post found"
+                data-message-other="{n} posts found">
+                4 posts found
+            </p>
+        </div>
+    </div>
+</div>
+
+        
+<div id="cover" style="background-image:url('/PlaygroundOpenGL/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/PlaygroundOpenGL/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
+<!--SCRIPTS END-->
+
+
+    </body>
 </html>

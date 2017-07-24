@@ -6,24 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Learn graphics programming">
-    <title>Build tool change - Learn graphics programming</title>
+    <title>all-archives - Learn graphics programming</title>
     <meta name="author" content="Victor Peter Rouven Müller">
     
     
     
-    <meta name="description" content="Short look into common C++ build toolsBuild tools for C++ are still these days a difficult topic. To know them is very important because often you want to run conform with the rest of the world.   CMA">
-<meta property="og:type" content="blog">
-<meta property="og:title" content="Build tool change">
-<meta property="og:url" content="https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/index.html">
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="all-archives">
+<meta property="og:url" content="https://realvictorprm.github.io/PlaygroundOpenGL/all-archives/index.html">
 <meta property="og:site_name" content="Learn graphics programming">
-<meta property="og:description" content="Short look into common C++ build toolsBuild tools for C++ are still these days a difficult topic. To know them is very important because often you want to run conform with the rest of the world.   CMA">
-<meta property="og:image" content="https://cmake.org/wp-content/uploads/2014/06/slider-cmake.png">
-<meta property="og:image" content="https://premake.github.io/premake-logo.png">
-<meta property="og:updated_time" content="2017-07-21T20:56:20.794Z">
+<meta property="og:updated_time" content="2017-07-21T20:43:16.275Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Build tool change">
-<meta name="twitter:description" content="Short look into common C++ build toolsBuild tools for C++ are still these days a difficult topic. To know them is very important because often you want to run conform with the rest of the world.   CMA">
-<meta name="twitter:image" content="https://cmake.org/wp-content/uploads/2014/06/slider-cmake.png">
+<meta name="twitter:title" content="all-archives">
 <meta name="twitter:creator" content="@realvictorprm">
     
     
@@ -31,9 +25,6 @@
     
     
     
-    
-        <meta property="og:image" content="https://www.opengl.org/img/opengl_logo.png"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://www.opengl.org/img/opengl_logo.png" />
     
     
     <!--STYLES-->
@@ -178,129 +169,73 @@
 </nav>
 
             
-        <div class="post-header-cover
-                    text-left
-                    "
-             style="background-image:url('https://www.opengl.org/img/opengl_logo.png');"
-             data-behavior="1">
-            
-                <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            Build tool change
-        </h1>
-    
-    
-        <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-07-17T21:30:27+02:00">
-	
-		    Jul 17, 2017
-    	
-    </time>
-    
-</div>
-
-    
-</div>
-            
-        </div>
-
             <div id="main" data-behavior="1"
-                 class="hasCover
+                 class="
                         hasCoverMetaIn
                         ">
                 
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
-    
-    
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
-            <h1 id="Short-look-into-common-C-build-tools"><a href="#Short-look-into-common-C-build-tools" class="headerlink" title="Short look into common C++ build tools"></a>Short look into common C++ build tools</h1><p>Build tools for C++ are still these days a difficult topic. To know them is very important because often you want to run conform with the rest of the world. </p>
-<h2 id="CMAKE"><a href="#CMAKE" class="headerlink" title=" CMAKE"></a><img src="https://cmake.org/wp-content/uploads/2014/06/slider-cmake.png" height="50"> <a href="https://cmake.org" target="_blank" rel="external">CMAKE</a></h2><p align="justify"><br>These days mostly used build tool is definitely <em>CMAKE</em>. Heavy usage is seen e.g. with Qt and other big libraries.<br>CMAKE in detail consists mainly of a single file called <em>CMakeLists.txt</em> (sometimes some helper script files are added for seperation).<br>This file describes the library requirements, header requirements, include folders etc. However it’s only used to generate the final build script files like <em>GNU Makefiles</em> or <em>Visual Studio solution files</em> through inputing it into the cmake command line tool. In short, sounds like a good tool <em>but</em> the language used to write those description files (cmakelist.txt) is a <em>weird variation of bash</em>. Definitely it isn’t that comfortable to work with and so some people still prefer other build tools. Last note, using CMAKE requires that the client has CMAKE installed.<br></p>
-
-<h2 id="Premake"><a href="#Premake" class="headerlink" title=" Premake"></a><img src="https://premake.github.io/premake-logo.png" height="50"> <a href="https://premake.github.io" target="_blank" rel="external">Premake</a></h2><p align="justify"><br>Another widely used tool is <em>premake</em>. Used by big game companies like <em>Blizzard</em> it’s definitely a tool to go. In general premake works the same like CMAKE however instead of using a weird variation of bash or other weird and uncomfortable languages it just makes usage of <em>Lua</em>. And so the build files are often very easy to write for normal developers because Lua is a widely know language without special knowledge requirements. Easy, simple, nice! Of course <em>premake</em> has some special functions and writings but it’s also very easy to understand. Nevertheless, best thing about <em>premake</em> is that it’s a lot easier to read compared to <em>CMAKE</em>. Unfortunately there are some reasons why <em>premake</em> isn’t as much used as <em>CMAKE</em>. One of those reasons is the lack of functionality e.g. passing special build command flags for the C++ compiler. Last note, using Premake requires the client <em>not</em> to have it installed. It’s often <em>shipped with the repository</em> as you may have noticed with mine.<br></p>
-
-<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><p>Due to the lack of selecting special C++ language version with Premake I’m pushed to switch the repositories build system to CMAKE. Unfortunately I’m using C++17 features which need special build flags. It’s really a bummer, <em>Premake</em> isn’t capable of this yet.. <em>yet</em> my friends!</p>
-<p>Now let’s work on switching the build system!</p>
-
+<div id="archives" class="main-content-wrap">
+    <form id="filter-form" action="#">
+        <input name="date" type="text" class="form-control input--xlarge" placeholder="Search date (YYYY/MM/DD)" autofocus="autofocus">
+    </form>
+    <h5 class="archive-result text-color-base text-xlarge"
+        data-message-zero="no post found"
+        data-message-one="1 post found"
+        data-message-other="{n} posts found"></h5>
+    <section class="boxes">
+        
             
-        </div>
-    </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
-        
-        
-            <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
+            
+            
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/PlaygroundOpenGL/2017/07/18/Surface-Nets/"  data-tooltip="Naive Surface Nets">
                 
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
-            </li>
-            <li class="post-action">
+                <div class="archive archive-year box" data-date="2017">
+                    <h4 class="archive-title">
+                        <a class="link-unstyled" href="/PlaygroundOpenGL/archives/2017">2017</a>
+                    </h4>
+            
+            
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/PlaygroundOpenGL/2017/07/17/First-showcase/" data-tooltip="First showcase">
+                <ul class="archive-posts archive-month" data-date="201707">
+                    <h5 class="archive-title">
+                        <a class="link-unstyled" href="/PlaygroundOpenGL/archives/2017/07">July</a>
+                    </h5>
                 
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        
             
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
+            <li class="archive-post archive-day" data-date="20170718">
+                <a class="archive-post-title" href="/PlaygroundOpenGL/2017/07/18/Surface-Nets/">Naive Surface Nets</a>
+                <span class="archive-post-date"> - jul 18, 2017</span>
             </li>
         
             
             
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
-                    <i class="fa fa-twitter"></i>
-                </a>
+            
+            
+            <li class="archive-post archive-day" data-date="20170717">
+                <a class="archive-post-title" href="/PlaygroundOpenGL/2017/07/17/Build-tools/">Build tool change</a>
+                <span class="archive-post-date"> - jul 17, 2017</span>
             </li>
         
             
             
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
-                    <i class="fa fa-google-plus"></i>
-                </a>
+            
+            
+            <li class="archive-post archive-day" data-date="20170717">
+                <a class="archive-post-title" href="/PlaygroundOpenGL/2017/07/17/First-showcase/">First showcase</a>
+                <span class="archive-post-date"> - jul 17, 2017</span>
             </li>
         
+            
+            
+            
+            
+            <li class="archive-post archive-day" data-date="20170717">
+                <a class="archive-post-title" href="/PlaygroundOpenGL/2017/07/17/First-post/">First post</a>
+                <span class="archive-post-date"> - jul 17, 2017</span>
+            </li>
         
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
+    </section>
 </div>
-
-
-        
-        
-            
-        
-    </div>
-</article>
-
-
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
@@ -309,104 +244,6 @@
 </footer>
 
             </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/PlaygroundOpenGL/2017/07/18/Surface-Nets/"  data-tooltip="Naive Surface Nets">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/PlaygroundOpenGL/2017/07/17/First-showcase/" data-tooltip="First showcase">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-        
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="1">
-    <i id="btn-close-shareoptions" class="fa fa-close"></i>
-    <ul class="share-options">
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
-                    <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
-                    <i class="fa fa-twitter"></i><span>Share on Twitter</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https://realvictorprm.github.io/PlaygroundOpenGL/2017/07/17/Build-tools/">
-                    <i class="fa fa-google-plus"></i><span>Share on Google+</span>
-                </a>
-            </li>
-        
-    </ul>
-</div>
-
             
         </div>
         
@@ -572,8 +409,6 @@
         <!--SCRIPTS-->
 <script src="/PlaygroundOpenGL/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
 <!--SCRIPTS END-->
-
-    
 
 
     </body>
