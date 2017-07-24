@@ -1,14 +1,15 @@
 ---
 title: First showcase
 date: 2017-07-17 17:33:21
-tags:
+tags: opengl, c++
+coverImage: https://www.opengl.org/img/opengl_logo.png
 ---
 
 With this repo here I finally started getting deeper into graphics programming and so I already can show some results.
 
 To get into OpenGL I've used the incredible good tutorials found [here](https://learnopengl.com).
 
-## Basic lighting, materials
+## 1. Basic lighting, materials
 
 I've made my way through those basic parts and produced nice colored cubes.
 During my experiments with the lighting I ran into some minor bugs in the specular shading
@@ -20,7 +21,7 @@ This resulted in inverted specular shading due to that my numbers were instead o
 
 After fixing this bug I went over to the next exciting topics. 
 
-## Loading models
+## 2. Loading models
 I guess this is one of the most important milestones in self-study sessions about graphics programming.
 However it's also one of the most annoying topics because there are plenty of 3d model formats. Thankfully there is a library called (assimp)[] which abstracts this for us.
 
@@ -35,7 +36,7 @@ This is from a few days ago and you see that the lighting is pretty fine. Could 
 
 What's next? More interesting topics like skyboxes!
 
-## Skyboxes, environment mapping, dynamics
+## 3. Skyboxes, environment mapping, dynamics
 
 After nice model loading I went back to my nice cube starting to implement some skybox support. Of course the tutorial helped here again, telling us what is needed.
 We had a lesson about cubemaps and simple reflection mathematics (which weren't that unfamiliar to me) which resulted finally in this.
@@ -45,7 +46,7 @@ We had a lesson about cubemaps and simple reflection mathematics (which weren't 
 This time we see a nice cup (unfortunately without any coffee!) which was made by a friend of mine, Benjamin.
 The cup doesn't reflect anything yet but this was just a proove of concept (both for the skybox and the model loading code).
 
-### Static and dynamic environment mapping
+### 4. Static and dynamic environment mapping
 
 After I noticed it works, I went over to add some reflection mechanics to the fragment shader.
 The algorithm here used was static environment mapping. It just uses a cubemap (here the skybox) to get data about the environment. The results are some static reflections. 

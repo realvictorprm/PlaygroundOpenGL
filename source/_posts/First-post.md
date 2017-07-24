@@ -2,6 +2,7 @@
 title: First post
 date: 2017-07-17 17:18:37
 tags:
+coverImage: https://www.opengl.org/img/opengl_logo.png
 ---
 
 
